@@ -5,7 +5,7 @@ const ThemeCard = () => {
   return (
     <div className="rounded-md shadow-md shadow-slate-200">
       {/* Image */}
-      <Link href={"/"}>
+      <Link href={`/themes/${1}`}>
         <div
           className="relative h-80 bg-cover bg-top bg-no-repeat w-full rounded-t-md"
           style={{
