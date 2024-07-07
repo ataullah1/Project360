@@ -23,7 +23,7 @@ const Navigation = () => {
 
   return (
     <div className="w-full h-20 flex  bg-white fixed top-0 left-0 right-0 z-40">
-      <nav className="max-w-[1400px] mx-auto h-20 flex items-center justify-between px-2 lg:px-0 md:px-0 bg-white fixed top-0 left-0 right-0 z-40">
+      <nav className="w-10/12 mx-auto h-20 flex items-center justify-between px-2 lg:px-0 md:px-0 bg-white fixed top-0 left-0 right-0 z-40">
         <div className="flex gap-16">
           <Link href={"/"}>
             <div className="flex gap-1 items-center">
