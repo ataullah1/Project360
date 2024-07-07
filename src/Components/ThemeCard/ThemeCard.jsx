@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = () => {
+const ThemeCard = () => {
   return (
     <div className="rounded-md shadow-md shadow-slate-200">
       {/* Image */}
@@ -54,4 +54,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default ThemeCard;

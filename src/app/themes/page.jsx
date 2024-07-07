@@ -1,10 +1,10 @@
 "use client";
 
-import DropdownSelectAccordion from "@/Components/dropdown-Select-Accordion/page";
+import DropdownSelectAccordion from "@/Components/DropdownSelectAccordion/DropdownSelectAccordion";
 import SelectDropdownFilter from "@/Components/SelectDropdownFilter/SelectDropdownFilter";
+import ThemeCard from "@/Components/ThemeCard/ThemeCard";
 import {
   Button,
-  Card,
   Modal,
   ModalBody,
   ModalContent,
@@ -68,7 +68,6 @@ const Themes = () => {
                 <ModalBody>
                   <SelectDropdownFilter />
                   <div className="">
-                    {" "}
                     <DropdownSelectAccordion />
                   </div>
                 </ModalBody>
@@ -94,7 +93,7 @@ const Themes = () => {
           {/* All Card Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {cards.map((dta, i) => (
-              <Card key={i} />
+              <ThemeCard key={i} />
             ))}
           </div>
 
