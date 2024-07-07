@@ -13,6 +13,7 @@ import {
 import DropdownSelectAccordion from "../dropdown-Select-Accordion/page";
 import Card from "../Card/Card";
 import SelectDropdownFilter from "../SelectDropdownFilter/SelectDropdownFilter";
+import next from "next";
 
 const AllThemes = () => {
   const cards = [1, 2, 3, 4, 5, 5, 5, 5, , 54, 5, 5, 5, 5, 5, 5, 5, 5];
@@ -102,6 +103,7 @@ const AllThemes = () => {
           <div className="w-full flex items-center justify-center my-14">
             <Pagination
               className="mx-auto shadow-none"
+              classNames={"next"}
               isCompact
               showControls
               size="lg"
