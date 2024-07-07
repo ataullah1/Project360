@@ -38,7 +38,7 @@ const Testimonial = () => {
                             </div>
                             <div className='ml-36'>
                                 <div className="text-center inline-block">
-                                    <Image src={slidImg1} className='w-[450px] h-[650px] border border-black rounded-xl'></Image>
+                                    <Image width={500} height={500} src={"https://cdn.shopify.com/theme-store/q1alwd14rzguxn4ilv2kepclqr5u.jpg"} className='w-[450px] h-[650px] border border-black rounded-xl'></Image>
 
                                     <p className='text-xl mt-10'> <Link href={`https://themes.shopify.com/themes/pipeline/styles/clean?locale=en&surface_detail=testimonials&surface_inter_position=4&surface_intra_position=8&surface_type=home`} className='underline'>Pipeline</Link> by Groupthought</p>
                                 </div>
@@ -54,7 +54,7 @@ const Testimonial = () => {
                             </div>
                             <div className='ml-36'>
                                 <div className="text-center inline-block">
-                                    <Image src='https://cdn.shopify.com/theme-store/q1alwd14rzguxn4ilv2kepclqr5u.jpg' className='w-[450px] h-[650px] border border-black rounded-xl'></Image>
+                                    <Image height={500} width={500} src='https://cdn.shopify.com/theme-store/q1alwd14rzguxn4ilv2kepclqr5u.jpg' className='w-[450px] h-[650px] border border-black rounded-xl'></Image>
 
                                     <p className='text-xl mt-10'> <Link href={`https://themes.shopify.com/themes/pipeline/styles/clean?locale=en&surface_detail=testimonials&surface_inter_position=4&surface_intra_position=8&surface_type=home`} className='underline'>Pipeline</Link> by Groupthought</p>
                                 </div>
@@ -70,7 +70,7 @@ const Testimonial = () => {
                             </div>
                             <div className='ml-36'>
                                 <div className="text-center inline-block">
-                                    <Image src='https://cdn.shopify.com/theme-store/q1alwd14rzguxn4ilv2kepclqr5u.jpg' className='w-[450px] h-[650px] border border-black rounded-xl'></Image>
+                                    <Image height={500} width={500} src='https://cdn.shopify.com/theme-store/q1alwd14rzguxn4ilv2kepclqr5u.jpg' className='w-[450px] h-[650px] border border-black rounded-xl'></Image>
 
                                     <p className='text-xl mt-10'> <Link href={`https://themes.shopify.com/themes/pipeline/styles/clean?locale=en&surface_detail=testimonials&surface_inter_position=4&surface_intra_position=8&surface_type=home`} className='underline'>Pipeline</Link> by Groupthought</p>
                                 </div>

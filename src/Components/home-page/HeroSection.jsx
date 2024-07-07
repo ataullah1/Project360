@@ -16,10 +16,10 @@ const HeroSection = () => {
             <div className="grid md:grid-cols-2 grid-cols-1 mt-20 gap-10">
                 <div>
                     <div className="relative h-[500px] overflow-hidden border border-black rounded-3xl">
-                        <Image className='rounded-3xl' src='https://cdn.shopify.com/theme-store/9tv2f6wnl8gnbj5ij7r9n6pqjkgg.jpg' ></Image>
+                        <Image  height={500} width={500} className='rounded-3xl' src='https://cdn.shopify.com/theme-store/9tv2f6wnl8gnbj5ij7r9n6pqjkgg.jpg' ></Image>
 
                         <div className="absolute right-5 bottom-0 w-[200px] h-[300px] overflow-hidden border border-black rounded-t-3xl">
-                            <Image className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/2jei9ak1db2d0sgr9tbzsdm08lo6.jpg' ></Image>
+                            <Image  height={500} alt='asdas' width={500}s className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/2jei9ak1db2d0sgr9tbzsdm08lo6.jpg' ></Image>
                         </div>
                     </div>
                     <div className="mt-4 ">
@@ -41,11 +41,11 @@ const HeroSection = () => {
                 </div>
                 <div>
                     <div className="relative h-[500px] overflow-hidden border border-black rounded-3xl">
-                        <Image className='rounded-3xl' src='https://cdn.shopify.com/theme-store/9tv2f6wnl8gnbj5ij7r9n6pqjkgg.jpg' ></Image>
+                        <Image height={500} width={500} alt='' className='rounded-3xl' src='https://cdn.shopify.com/theme-store/9tv2f6wnl8gnbj5ij7r9n6pqjkgg.jpg' ></Image>
 
 
                         <div className="absolute right-5 bottom-0 w-[200px] h-[300px] overflow-hidden border border-black rounded-t-3xl">
-                            <Image className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/2jei9ak1db2d0sgr9tbzsdm08lo6.jpg' ></Image>
+                            <Image height={500} width={500} alt='' className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/2jei9ak1db2d0sgr9tbzsdm08lo6.jpg' ></Image>
                         </div>
                     </div>
                     <div className="mt-4 ">

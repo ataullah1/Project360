@@ -18,10 +18,10 @@ const HomeCardSection = () => {
             <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 mt-20 gap-10'>
                 <div >
                     <div className="relative h-[500px] overflow-hidden border border-black rounded-3xl">
-                        <Image className='rounded-3xl' src='https://cdn.shopify.com/theme-store/0lod6604ii43rwdncamv9bmo7uvi.jpg' ></Image>
+                        <Image  fill className='rounded-3xl' src='https://cdn.shopify.com/theme-store/0lod6604ii43rwdncamv9bmo7uvi.jpg' ></Image>
 
                         <div className="absolute right-5 bottom-0 w-[160px] h-[260px] overflow-hidden border border-black rounded-t-3xl">
-                            <Image className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/wnaewfma0ntb8f77ztz6ypt5jqm7.jpg' ></Image>
+                            <Image fill className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/wnaewfma0ntb8f77ztz6ypt5jqm7.jpg' ></Image>
                         </div>
                     </div>
                     <div className="mt-4 ">
@@ -44,10 +44,10 @@ const HomeCardSection = () => {
                 </div>
                 <div>
                     <div className="relative h-[500px] overflow-hidden border border-black rounded-3xl">
-                        <Image className='rounded-3xl' src='https://cdn.shopify.com/theme-store/0lod6604ii43rwdncamv9bmo7uvi.jpg' ></Image>
+                        <Image fill className='rounded-3xl' src='https://cdn.shopify.com/theme-store/0lod6604ii43rwdncamv9bmo7uvi.jpg' ></Image>
 
                         <div className="absolute right-5 bottom-0 w-[160px] h-[260px] overflow-hidden border border-black rounded-t-3xl">
-                            <Image className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/wnaewfma0ntb8f77ztz6ypt5jqm7.jpg' ></Image>
+                            <Image fill className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/wnaewfma0ntb8f77ztz6ypt5jqm7.jpg' ></Image>
                         </div>
                     </div>
                     <div className="mt-4 ">
@@ -69,10 +69,10 @@ const HomeCardSection = () => {
                 </div>
                 <div>
                     <div className="relative h-[500px] overflow-hidden border border-black rounded-3xl">
-                        <Image className='rounded-3xl' src='https://cdn.shopify.com/theme-store/0jq8w4a9oxxwx76u7l0zewvf20xz.jpg' ></Image>
+                        <Image fill className='rounded-3xl' src='https://cdn.shopify.com/theme-store/0jq8w4a9oxxwx76u7l0zewvf20xz.jpg' ></Image>
 
                         <div className="absolute right-5 bottom-0 w-[160px] h-[260px] overflow-hidden border border-black rounded-t-3xl">
-                            <Image className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/0jq8w4a9oxxwx76u7l0zewvf20xz.jpg' ></Image>
+                            <Image fill className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/0jq8w4a9oxxwx76u7l0zewvf20xz.jpg' ></Image>
                         </div>
                     </div>
                     <div className="mt-4 ">
@@ -94,10 +94,10 @@ const HomeCardSection = () => {
                 </div>
                 <div>
                     <div className="relative h-[500px] overflow-hidden border border-black rounded-3xl">
-                        <Image className='rounded-3xl' src='https://cdn.shopify.com/theme-store/0lod6604ii43rwdncamv9bmo7uvi.jpg' ></Image>
+                        <Image fill className='rounded-3xl' src='https://cdn.shopify.com/theme-store/0lod6604ii43rwdncamv9bmo7uvi.jpg' ></Image>
 
                         <div className="absolute right-5 bottom-0 w-[160px] h-[260px] overflow-hidden border border-black rounded-t-3xl">
-                            <Image className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/wnaewfma0ntb8f77ztz6ypt5jqm7.jpg' ></Image>
+                            <Image fill className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/wnaewfma0ntb8f77ztz6ypt5jqm7.jpg' ></Image>
                         </div>
                     </div>
                     <div className="mt-4 ">
@@ -123,10 +123,10 @@ const HomeCardSection = () => {
             <div className='grid md:grid-cols-3 grid-cols-1 mt-20 gap-10'>
                 <div>
                     <div className="relative h-[550px] overflow-hidden border border-black rounded-3xl">
-                        <Image className='rounded-3xl' src='https://cdn.shopify.com/theme-store/23m042yyny5wgt00ve2g1i8ap3bv.jpg' ></Image>
+                        <Image fill className='rounded-3xl' src='https://cdn.shopify.com/theme-store/23m042yyny5wgt00ve2g1i8ap3bv.jpg' ></Image>
 
                         <div className="absolute right-5 bottom-0 w-[160px] h-[260px] overflow-hidden border border-black rounded-t-3xl">
-                            <Image className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/0jq8w4a9oxxwx76u7l0zewvf20xz.jpg' ></Image>
+                            <Image fill className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/0jq8w4a9oxxwx76u7l0zewvf20xz.jpg' ></Image>
                         </div>
                     </div>
                     <div className="mt-4 ">
@@ -148,10 +148,10 @@ const HomeCardSection = () => {
                 </div>
                 <div>
                     <div className="relative h-[550px] overflow-hidden border border-black rounded-3xl">
-                        <Image className='rounded-3xl' src='https://cdn.shopify.com/theme-store/0lod6604ii43rwdncamv9bmo7uvi.jpg' ></Image>
+                        <Image fill className='rounded-3xl' src='https://cdn.shopify.com/theme-store/0lod6604ii43rwdncamv9bmo7uvi.jpg' ></Image>
 
                         <div className="absolute right-5 bottom-0 w-[160px] h-[260px] overflow-hidden border border-black rounded-t-3xl">
-                            <Image className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/wnaewfma0ntb8f77ztz6ypt5jqm7.jpg' ></Image>
+                            <Image fill className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/wnaewfma0ntb8f77ztz6ypt5jqm7.jpg' ></Image>
                         </div>
                     </div>
                     <div className="mt-4 ">
@@ -173,10 +173,10 @@ const HomeCardSection = () => {
                 </div>
                 <div>
                     <div className="relative h-[550px] overflow-hidden border border-black rounded-3xl">
-                        <Image className='rounded-3xl' src='https://cdn.shopify.com/theme-store/23m042yyny5wgt00ve2g1i8ap3bv.jpg' ></Image>
+                        <Image fill className='rounded-3xl' src='https://cdn.shopify.com/theme-store/23m042yyny5wgt00ve2g1i8ap3bv.jpg' ></Image>
 
                         <div className="absolute right-5 bottom-0 w-[160px] h-[260px] overflow-hidden border border-black rounded-t-3xl">
-                            <Image className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/0jq8w4a9oxxwx76u7l0zewvf20xz.jpg' ></Image>
+                            <Image fill className='rounded-t-3xl h-full' src='https://cdn.shopify.com/theme-store/0jq8w4a9oxxwx76u7l0zewvf20xz.jpg' ></Image>
                         </div>
                     </div>
                     <div className="mt-4 ">

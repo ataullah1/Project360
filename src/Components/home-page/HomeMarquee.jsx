@@ -8,7 +8,7 @@ const HomeMarquee = () => {
             <Marquee pauseOnHover={true}>
                 <div className='flex gap-12 mb-10'>
                     <div className='relative group overflow-hidden'>
-                    <Image className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/hf5090g0xog2g0foifkpovpt398f.jpg'></Image>
+                    <Image fill className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/hf5090g0xog2g0foifkpovpt398f.jpg'></Image>
                     <div className='absolute hover:bg-white/80 inset-0 w-full h-full translate-y-[100%] group-hover:translate-y-0 flex flex-col justify-center items-center'>
                         <h3 className='text-2xl'>Parise</h3>
                         <p>$230 USD</p>
@@ -16,7 +16,7 @@ const HomeMarquee = () => {
                     </div>
                     </div>
                     <div className='relative group overflow-hidden'>
-                    <Image className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/i4cw9c8tqpwjwrjv7rpixe5gnrc1.jpg'></Image>
+                    <Image fill className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/i4cw9c8tqpwjwrjv7rpixe5gnrc1.jpg'></Image>
                     <div className='absolute hover:bg-white/80 inset-0 w-full h-full translate-y-[100%] group-hover:translate-y-0 flex flex-col justify-center items-center'>
                         <h3 className='text-2xl'>Parise</h3>
                         <p>$230 USD</p>
@@ -24,7 +24,7 @@ const HomeMarquee = () => {
                     </div>
                     </div>
                     <div className='relative group overflow-hidden'>
-                    <Image className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/i4cw9c8tqpwjwrjv7rpixe5gnrc1.jpg'></Image>
+                    <Image fill className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/i4cw9c8tqpwjwrjv7rpixe5gnrc1.jpg'></Image>
                     <div className='absolute hover:bg-white/80 inset-0 w-full h-full translate-y-[100%] group-hover:translate-y-0 flex flex-col justify-center items-center'>
                         <h3 className='text-2xl'>Parise</h3>
                         <p>$230 USD</p>
@@ -32,7 +32,7 @@ const HomeMarquee = () => {
                     </div>
                     </div>
                     <div className='relative group overflow-hidden'>
-                    <Image className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/hf5090g0xog2g0foifkpovpt398f.jpg'></Image>
+                    <Image fill className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/hf5090g0xog2g0foifkpovpt398f.jpg'></Image>
                     <div className='absolute hover:bg-white/80 inset-0 w-full h-full translate-y-[100%] group-hover:translate-y-0 flex flex-col justify-center items-center'>
                         <h3 className='text-2xl'>Parise</h3>
                         <p>$230 USD</p>
@@ -40,7 +40,7 @@ const HomeMarquee = () => {
                     </div>
                     </div>
                     <div className='relative group overflow-hidden'>
-                    <Image className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/i4cw9c8tqpwjwrjv7rpixe5gnrc1.jpg'></Image>
+                    <Image fill className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/i4cw9c8tqpwjwrjv7rpixe5gnrc1.jpg'></Image>
                     <div className='absolute hover:bg-white/80 inset-0 w-full h-full translate-y-[100%] group-hover:translate-y-0 flex flex-col justify-center items-center '>
                         <h3 className='text-2xl'>Parise</h3>
                         <p>$230 USD</p>
@@ -53,7 +53,7 @@ const HomeMarquee = () => {
             <Marquee pauseOnHover={true} direction={'right'}>
                 <div className='flex gap-12 '>
                     <div className='relative group overflow-hidden'>
-                    <Image className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/hf5090g0xog2g0foifkpovpt398f.jpg'></Image>
+                    <Image fill className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/hf5090g0xog2g0foifkpovpt398f.jpg'></Image>
                     <div className='absolute hover:bg-white/80 inset-0 w-full h-full translate-y-[100%] group-hover:translate-y-0 flex flex-col justify-center items-center'>
                         <h3 className='text-2xl'>Parise</h3>
                         <p>$230 USD</p>
@@ -61,7 +61,7 @@ const HomeMarquee = () => {
                     </div>
                     </div>
                     <div className='relative group overflow-hidden'>
-                    <Image className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/i4cw9c8tqpwjwrjv7rpixe5gnrc1.jpg'></Image>
+                    <Image fill className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/i4cw9c8tqpwjwrjv7rpixe5gnrc1.jpg'></Image>
                     <div className='absolute hover:bg-white/80 inset-0 w-full h-full translate-y-[100%] group-hover:translate-y-0 flex flex-col justify-center items-center'>
                         <h3 className='text-2xl'>Parise</h3>
                         <p>$230 USD</p>
@@ -69,7 +69,7 @@ const HomeMarquee = () => {
                     </div>
                     </div>
                     <div className='relative group overflow-hidden'>
-                    <Image className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/i4cw9c8tqpwjwrjv7rpixe5gnrc1.jpg'></Image>
+                    <Image fill className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/i4cw9c8tqpwjwrjv7rpixe5gnrc1.jpg'></Image>
                     <div className='absolute hover:bg-white/80 inset-0 w-full h-full translate-y-[100%] group-hover:translate-y-0 flex flex-col justify-center items-center'>
                         <h3 className='text-2xl'>Parise</h3>
                         <p>$230 USD</p>
@@ -77,7 +77,7 @@ const HomeMarquee = () => {
                     </div>
                     </div>
                     <div className='relative group overflow-hidden'>
-                    <Image className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/hf5090g0xog2g0foifkpovpt398f.jpg'></Image>
+                    <Image fill className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/hf5090g0xog2g0foifkpovpt398f.jpg'></Image>
                     <div className='absolute hover:bg-white/80 inset-0 w-full h-full translate-y-[100%] group-hover:translate-y-0 flex flex-col justify-center items-center'>
                         <h3 className='text-2xl'>Parise</h3>
                         <p>$230 USD</p>
@@ -85,7 +85,7 @@ const HomeMarquee = () => {
                     </div>
                     </div>
                     <div className='relative group overflow-hidden'>
-                    <Image className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/i4cw9c8tqpwjwrjv7rpixe5gnrc1.jpg'></Image>
+                    <Image fill className='w-full h-[550px] border border-black rounded-xl' src='https://cdn.shopify.com/theme-store/i4cw9c8tqpwjwrjv7rpixe5gnrc1.jpg'></Image>
                     <div className='absolute hover:bg-white/80 inset-0 w-full h-full translate-y-[100%] group-hover:translate-y-0 flex flex-col justify-center items-center '>
                         <h3 className='text-2xl'>Parise</h3>
                         <p>$230 USD</p>
