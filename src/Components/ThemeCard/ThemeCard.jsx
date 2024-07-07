@@ -1,22 +1,25 @@
+import Link from "next/link";
 import React from "react";
 
 const ThemeCard = () => {
   return (
     <div className="rounded-md shadow-md shadow-slate-200">
       {/* Image */}
-      <div
-        className="relative h-80 bg-cover bg-top bg-no-repeat w-full rounded-t-md"
-        style={{
-          backgroundImage: `url('https://cdn.shopify.com/theme-store/uzytj99sjpifjw3cn06grbxh6eri.jpg')`,
-        }}
-      >
+      <Link href={"/"}>
         <div
-          className="h-56 w-36 bg-cover bg-top bg-no-repeat rounded-t-md absolute bottom-0 right-3 border-2 border-slate-900"
+          className="relative h-80 bg-cover bg-top bg-no-repeat w-full rounded-t-md"
           style={{
-            backgroundImage: `url('https://cdn.shopify.com/theme-store/weswp5j2hvc63m5i3u1b066ejf66.jpg')`,
+            backgroundImage: `url('https://cdn.shopify.com/theme-store/uzytj99sjpifjw3cn06grbxh6eri.jpg')`,
           }}
-        ></div>
-      </div>
+        >
+          <div
+            className="h-56 w-36 bg-cover bg-top bg-no-repeat rounded-t-md absolute bottom-0 right-3 border-2 border-slate-900"
+            style={{
+              backgroundImage: `url('https://cdn.shopify.com/theme-store/weswp5j2hvc63m5i3u1b066ejf66.jpg')`,
+            }}
+          ></div>
+        </div>
+      </Link>
       <div className="p-3">
         <div className="flex items-center justify-between">
           <h1 className="text-xl font-semibold">Retro</h1>

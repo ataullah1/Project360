@@ -37,7 +37,6 @@ const Navigation = () => {
           <div className="flex">
             <ul className="hidden md:flex lg:flex gap-7 font-medium">
               <li className="">
-                {" "}
                 <Dropdown>
                   <DropdownTrigger>
                     <div className="flex gap-2 items-center">
