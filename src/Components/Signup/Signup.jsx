@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from "react";
@@ -25,7 +26,7 @@ const Signup = () => {
 
     const userData = { name, email, password };
     console.log(userData);
-    mutate(userData);
+    userData;
     // try {
     //   const response = await axios.post(
     //     "https://theme-store-server.vercel.app/api/v1/users",
@@ -81,12 +82,7 @@ const Signup = () => {
               className="border mt-1 mb-3 border-[#1a1a1a] w-full py-2 px-3 rounded-lg"
             />
 
-            <Button
-              className="className='w-full  h-11 mt-3 hover:bg-[#ebebeb]  font-medium  rounded-lg flex justify-center items-center gap-3 "
-              type="submit"
-              color="primary"
-              isLoading={isPending}
-            >
+            <Button type="submit" color="primary" isLoading={isPending}>
               Button
             </Button>
             {/* <button className='w-full  h-11 mt-3 hover:bg-[#ebebeb]  font-medium  rounded-lg flex justify-center items-center gap-3 '><LiaUserLockSolid className='text-2xl ' /> <span className='text-sm'>sign in with passkye</span></button> */}

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-const ThemeCard = () => {
+const ThemeCard = ({ data }) => {
+  console.log(data);
   return (
     <div className="rounded-md shadow-md shadow-slate-200">
       {/* Image */}

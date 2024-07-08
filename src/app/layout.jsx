@@ -3,9 +3,8 @@ import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import Navigation from "@/Components/nav/page";
 import Footer from "@/Components/footer/page";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import QueryProvider from "./Providers/queryProvider";
-require("dotenv").config();
+import QueryProvider from "@/providers/QueryProvider";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -22,9 +21,9 @@ export default function RootLayout({ children }) {
         <NextUIProvider>
           <QueryProvider>
             <Navigation />
+
             {children}
             <Footer />
-            <ReactQueryDevtools />
           </QueryProvider>
         </NextUIProvider>
       </body>

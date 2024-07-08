@@ -3,6 +3,7 @@
 import DropdownSelectAccordion from "@/Components/DropdownSelectAccordion/DropdownSelectAccordion";
 import SelectDropdownFilter from "@/Components/SelectDropdownFilter/SelectDropdownFilter";
 import ThemeCard from "@/Components/ThemeCard/ThemeCard";
+import useFetchQuery from "@/Hooks/shared/useFetch";
 import {
   Button,
   Modal,
@@ -12,14 +13,17 @@ import {
   Pagination,
   useDisclosure,
 } from "@nextui-org/react";
+import { useEffect, useState } from "react";
 
 const Themes = () => {
-  const cards = [1, 2, 3, 4, 5, 5, 5, 5, , 54, 5, 5, 5, 5, 5, 5, 5, 5];
+  const [cards, setCards] = useState([]);
+  const [page, setPage] = useState(1);
 
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
     <div className="mt-24">
+      <button onClick={() => {}}> fetch {page} </button>
       {/* Header Section  */}
       <div className="bg-[#fafafa]">
         <div className="py-8 md:py-12 w-11/12 mx-auto flex items-center justify-between">
@@ -93,8 +97,8 @@ const Themes = () => {
 
           {/* All Card Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-            {cards.map((dta, i) => (
-              <ThemeCard key={i} />
+            {cards.map((data, i) => (
+              <ThemeCard data={data} key={i} />
             ))}
           </div>
 
