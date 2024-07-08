@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Divider } from "@nextui-org/react";
-import { LiaUserLockSolid } from "react-icons/lia";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const Login = () => {
@@ -8,7 +8,6 @@ const Login = () => {
     <div className=" w-full pt-32 css-selector p-2">
       <div className="max-w-[500px] mx-auto  mb-6   p-10 rounded-2xl bg-white">
         <div className="">
-          {" "}
           <img src={"/log.png"} className="h-16 " alt="" />
         </div>
         <div className="">
@@ -31,7 +30,7 @@ const Login = () => {
           />
 
           <button className="w-full  h-11 bg-[#2a2a2a]  font-semibold text-white rounded-lg">
-            Sign up{" "}
+            Sign up
           </button>
           {/* <button className='w-full  h-11 mt-3 hover:bg-[#ebebeb]  font-medium  rounded-lg flex justify-center items-center gap-3 '><LiaUserLockSolid className='text-2xl ' /> <span className='text-sm'>sign in with passkye</span></button> */}
         </div>
@@ -47,16 +46,12 @@ const Login = () => {
         {/* socal button */}
         <div className=" mt-6 grid grid-cols-3 gap-3 h-12">
           <div className=" bg-[#ebebeb] rounded-lg flex  justify-center items-center">
-            {" "}
             <div className="  ">
-              {" "}
               <img src={"/applelogo.svg"} className="h-6 hover:h-5 " alt="" />
             </div>
           </div>
           <div className=" bg-[#ebebeb] rounded-lg flex  justify-center items-center">
-            {" "}
             <div className="   ">
-              {" "}
               <img
                 src={"/facebooklogo (1).svg"}
                 className="h-6 hover:h-5  "
@@ -65,9 +60,7 @@ const Login = () => {
             </div>
           </div>
           <div className=" bg-[#ebebeb] rounded-lg flex  justify-center items-center">
-            {" "}
             <div className="  ">
-              {" "}
               <img
                 src={"/googlelogo.svg"}
                 className=" h-6  hover:h-5 "
