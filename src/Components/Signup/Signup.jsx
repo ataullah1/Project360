@@ -1,40 +1,35 @@
-'use client'
+"use client";
 import React from "react";
 import { Divider } from "@nextui-org/react";
-import axios from 'axios';
+import axios from "axios";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const Signup = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("form submitted");
 
+    const form = e.target;
+    const name = form.elements.name.value;
+    const email = form.elements.email.value;
+    const password = form.elements.password.value;
 
+    const userData = { name, email, password };
+    console.log(userData);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        console.log("form submitted");
-        
-        const form = e.target;
-        const name = form.elements.name.value;
-        const email = form.elements.email.value;
-        const password = form.elements.password.value;
-        
-        const userData = { name, email, password };
-        console.log(userData);
-    
-        try {
-            const response = await axios.post(
-                'https://theme-store-server.vercel.app/api/v1/users',
-                userData
-            );
-            
-            console.log('Response:', response.data);
-            // Handle success (optional)
-        } catch (error) {
-            console.error('Error:', error);
-            // Handle error (optional)
-        }
-    };
-    
+    try {
+      const response = await axios.post(
+        "https://theme-store-server.vercel.app/api/v1/users",
+        userData
+      );
 
+      console.log("Response:", response.data);
+      // Handle success (optional)
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle error (optional)
+    }
+  };
 
   return (
     <div className=" w-full pt-32 css-selector  p-2  ">
@@ -50,21 +45,36 @@ const Signup = () => {
           </p>
         </div>
 
-        <form  onSubmit={handleSubmit}>
-            
-        <div className="mt-9">
-                <h5>Name</h5>
-                <input type="text"    required   name='name' className='border mt-1 mb-3 border-[#1a1a1a] w-full py-2 px-3 rounded-lg' />
-             
-                <h5>Email</h5>
-                <input type="text" required  name='email' className='border mt-1 mb-3 border-[#1a1a1a] w-full py-2 px-3 rounded-lg' />
-                <h5>Password</h5>
-                <input type="Password" required name='password' className='border mt-1 mb-3 border-[#1a1a1a] w-full py-2 px-3 rounded-lg' />
+        <form onSubmit={handleSubmit}>
+          <div className="mt-9">
+            <h5>Name</h5>
+            <input
+              type="text"
+              required
+              name="name"
+              className="border mt-1 mb-3 border-[#1a1a1a] w-full py-2 px-3 rounded-lg"
+            />
 
-                <button className='w-full  h-11 bg-[#2a2a2a]  font-semibold text-white rounded-lg'>Sign up  </button>
-                {/* <button className='w-full  h-11 mt-3 hover:bg-[#ebebeb]  font-medium  rounded-lg flex justify-center items-center gap-3 '><LiaUserLockSolid className='text-2xl ' /> <span className='text-sm'>sign in with passkye</span></button> */}
-            </div>
+            <h5>Email</h5>
+            <input
+              type="text"
+              required
+              name="email"
+              className="border mt-1 mb-3 border-[#1a1a1a] w-full py-2 px-3 rounded-lg"
+            />
+            <h5>Password</h5>
+            <input
+              type="Password"
+              required
+              name="password"
+              className="border mt-1 mb-3 border-[#1a1a1a] w-full py-2 px-3 rounded-lg"
+            />
 
+            <button className="w-full  h-11 bg-[#2a2a2a]  font-semibold text-white rounded-lg">
+              Sign up{" "}
+            </button>
+            {/* <button className='w-full  h-11 mt-3 hover:bg-[#ebebeb]  font-medium  rounded-lg flex justify-center items-center gap-3 '><LiaUserLockSolid className='text-2xl ' /> <span className='text-sm'>sign in with passkye</span></button> */}
+          </div>
         </form>
         {/* horizental line */}
 
