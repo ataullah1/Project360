@@ -5,7 +5,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const Login = () => {
     return (
-        <div className=' lg:h-screen md:h-screen w-full pt-32 css-selector  p-2  '  >
+        <div className=' lg:h-screen md:h-screen w-full pt-32 css-selector p-2'  >
             <div className="max-w-[500px] mx-auto  mb-6   p-10 rounded-2xl bg-white">
                 <div className="">  <img src={"/log.png"} className='h-16 ' alt="" /></div>
                 <div className="">
@@ -50,7 +50,6 @@ const Login = () => {
                     <div className=" flex gap-2">
                         <p className='text-sm text-[#616161]  mt-12 hover:underline'>Help</p>
                         <p className='text-sm text-[#616161]  mt-12 hover:underline'>Privacy</p>
-
                         <p className='text-sm text-[#616161]  mt-12 hover:underline'>Terms</p>
                     </div>
 
