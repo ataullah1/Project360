@@ -14,32 +14,26 @@ body {
 
 /* Login signup background gredient */
 .css-selector {
-  background: linear-gradient(141deg, #4c4383, #2d2f3e, #336765);
-  background-size: 600% 600%;
+  background: linear-gradient(235deg, #50448e, #256b69);
+  background-size: 400% 400%;
 
-  -webkit-animation: AnimationName 3s ease infinite;
-  -moz-animation: AnimationName 3s ease infinite;
-  -o-animation: AnimationName 3s ease infinite;
-  animation: AnimationName 3s ease infinite;
+  -webkit-animation: AnimationName 25s ease infinite;
+  -moz-animation: AnimationName 25s ease infinite;
+  animation: AnimationName 25s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
-  0%{background-position:59% 0%}
-  50%{background-position:42% 100%}
-  100%{background-position:59% 0%}
+  0%{background-position:0% 88%}
+  50%{background-position:100% 13%}
+  100%{background-position:0% 88%}
 }
 @-moz-keyframes AnimationName {
-  0%{background-position:59% 0%}
-  50%{background-position:42% 100%}
-  100%{background-position:59% 0%}
-}
-@-o-keyframes AnimationName {
-  0%{background-position:59% 0%}
-  50%{background-position:42% 100%}
-  100%{background-position:59% 0%}
+  0%{background-position:0% 88%}
+  50%{background-position:100% 13%}
+  100%{background-position:0% 88%}
 }
 @keyframes AnimationName {
-  0%{background-position:59% 0%}
-  50%{background-position:42% 100%}
-  100%{background-position:59% 0%}
+  0%{background-position:0% 88%}
+  50%{background-position:100% 13%}
+  100%{background-position:0% 88%}
 }

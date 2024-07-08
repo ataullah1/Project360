@@ -2,14 +2,18 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import Cookies from "js-cookie";
 import useAxiosSecure from "../useSecureApi";
 
-const usePostMutate = (route, onSuccess = () => {}, onError = () => {}) => {
+const useUpdateMutateWithID = (
+  route,
+  onSuccess = () => {},
+  onError = () => {}
+) => {
   const Axios = useAxiosSecure();
   const token = Cookies.get("user");
   const queryClient = useQueryClient();
 
   const { mutate, isPending } = useMutation({
     mutationFn: (obj) =>
-      Axios.post(route, obj, {
+      Axios.patch(route + obj.id, obj, {
         headers: {
           Authorization: token,
         },
@@ -29,4 +33,4 @@ const usePostMutate = (route, onSuccess = () => {}, onError = () => {}) => {
   return { mutate, isPending };
 };
 
-export default usePostMutate;
+export default useUpdateMutateWithID;

@@ -1,10 +1,20 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
+
 import React from "react";
-import { Divider } from "@nextui-org/react";
-import axios from "axios";
+import { Button, Divider, Input } from "@nextui-org/react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import usePostMutate from "@/Hooks/shared/usePostMutate";
 
 const Signup = () => {
+  const onSuccess = (res) => {
+    console.log(res, "from tanstack");
+  };
+  const onError = (err) => {
+    console.log(err, "from tanstack");
+  };
+  const { mutate, isPending } = usePostMutate("/users/", onSuccess, onError);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("form submitted");
@@ -16,19 +26,19 @@ const Signup = () => {
 
     const userData = { name, email, password };
     console.log(userData);
+    userData;
+    // try {
+    //   const response = await axios.post(
+    //     "https://theme-store-server.vercel.app/api/v1/users",
+    //     userData
+    //   );
 
-    try {
-      const response = await axios.post(
-        "https://theme-store-server.vercel.app/api/v1/users",
-        userData
-      );
-
-      console.log("Response:", response.data);
-      // Handle success (optional)
-    } catch (error) {
-      console.error("Error:", error);
-      // Handle error (optional)
-    }
+    //   console.log("Response:", response.data);
+    //   // Handle success (optional)
+    // } catch (error) {
+    //   console.error("Error:", error);
+    //   // Handle error (optional)
+    // }
   };
 
   return (
@@ -48,10 +58,12 @@ const Signup = () => {
         <form onSubmit={handleSubmit}>
           <div className="mt-9">
             <h5>Name</h5>
-            <input
+            <Input
               type="text"
               required
               name="name"
+              errorMessage="Name is Required"
+              // isInvalid={}
               className="border mt-1 mb-3 border-[#1a1a1a] w-full py-2 px-3 rounded-lg"
             />
 
@@ -70,9 +82,14 @@ const Signup = () => {
               className="border mt-1 mb-3 border-[#1a1a1a] w-full py-2 px-3 rounded-lg"
             />
 
-            <button className="w-full  h-11 bg-[#2a2a2a]  font-semibold text-white rounded-lg">
-              Sign up{" "}
-            </button>
+            <Button
+              className="className='w-full  h-11 mt-3 hover:bg-[#ebebeb]  font-medium  rounded-lg flex justify-center items-center gap-3 "
+              type="submit"
+              color="primary"
+              isLoading={isPending}
+            >
+              Button
+            </Button>
             {/* <button className='w-full  h-11 mt-3 hover:bg-[#ebebeb]  font-medium  rounded-lg flex justify-center items-center gap-3 '><LiaUserLockSolid className='text-2xl ' /> <span className='text-sm'>sign in with passkye</span></button> */}
           </div>
         </form>

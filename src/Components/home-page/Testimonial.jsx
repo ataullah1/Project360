@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable jsx-a11y/alt-text */
 "use client";
 import { FaQuoteLeft } from "react-icons/fa";
 import "./style/componentStyle.css";
