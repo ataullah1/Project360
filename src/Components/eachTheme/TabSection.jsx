@@ -26,20 +26,6 @@ const TabSection = () => {
               <div className="relative overflow-x-auto ">
                 <table className="w-full text-sm text-left rtl:text-right text-black ">
                   <tbody>
-                    {/* {[1, 2, 3, 4].map((element) => (
-                      <tr key={1} className="border-b text-start  ">
-                        <th
-                          scope="row"
-                          className="px-6 py-4  text-gray-900 whitespace-nowrap font-semibold"
-                        >
-                          Apple MacBook Pro 17"
-                        </th>
-                        <td className="px-6 py-4">Silver</td>
-                        <td className="px-6 py-4">Laptop</td>
-                        <td className="px-6 py-4">$2999</td>
-                        <td className="px-6 py-4">$2999</td>
-                      </tr>
-                    ))} */}
                     <tr className="border-b  ">
                       <th
                         scope="row"

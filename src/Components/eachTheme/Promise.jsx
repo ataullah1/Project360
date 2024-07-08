@@ -1,6 +1,9 @@
 import React from 'react';
 import { AiOutlineFieldTime } from "react-icons/ai";
-
+import { FaPhotoFilm } from 'react-icons/fa6';
+import { TbBrandSpeedtest, TbLicense } from "react-icons/tb";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
+import { MdOutlineSystemUpdateAlt } from "react-icons/md";
 const Promise = () => {
     return (
         <div className='bg-[#fafaf9] text-black'>
@@ -12,7 +15,7 @@ const Promise = () => {
                 <div className=' lg:w-1/2 w-full grid lg:grid-cols-2 grid-cols-1 gap-8 '>
                     <div>
                         <div className=' flex items-center gap-2'>
-                            <AiOutlineFieldTime size={'2rem'} />
+                            <VscWorkspaceTrusted size={'2rem'} />
                             <h1 className=' font-semibold'>Works with the latest Shopify features</h1>
                         </div>
                         <div className='pl-8 text-[#56524E]'>
@@ -23,7 +26,7 @@ const Promise = () => {
                     </div>
                     <div>
                         <div className=' flex items-center gap-2'>
-                            <AiOutlineFieldTime size={'2rem'} />
+                            <TbBrandSpeedtest size={'2rem'} />
                             <h1 className=' font-semibold'>Speed-tested and approved</h1>
                         </div>
                         <div className='pl-8 text-[#56524E]'>
@@ -47,7 +50,7 @@ const Promise = () => {
                     </div>
                     <div>
                         <div className=' flex items-center gap-2'>
-                            <AiOutlineFieldTime size={'2rem'} />
+                            <FaPhotoFilm size={'2rem'} />
                             <h1 className=' font-semibold'>Free high-resolution photos</h1>
                         </div>
                         <div className='pl-8 text-[#56524E]'>
@@ -58,7 +61,7 @@ const Promise = () => {
                     </div>
                     <div>
                         <div className=' flex items-center gap-2'>
-                            <AiOutlineFieldTime size={'2rem'} />
+                            <MdOutlineSystemUpdateAlt size={'2rem'} />
                             <h1 className=' font-semibold'>Free theme updates</h1>
                         </div>
                         <div className='pl-8 text-[#56524E]'>
@@ -71,7 +74,7 @@ const Promise = () => {
                     </div>
                     <div>
                         <div className=' flex items-center gap-2'>
-                            <AiOutlineFieldTime size={'2rem'} />
+                            <TbLicense size={'2rem'} />
                             <h1 className=' font-semibold'>Non-expiring license for one store</h1>
                         </div>
                         <div className='pl-8 text-[#56524E]'>
