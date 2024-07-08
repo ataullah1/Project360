@@ -1,12 +1,9 @@
 "use client";
 import { Tabs, Tab, Button } from "@nextui-org/react";
 import React from "react";
-<<<<<<< HEAD
-=======
 import { FaHeadphones } from "react-icons/fa";
 import { GrDocumentVerified } from "react-icons/gr";
 import { IoLocationSharp } from "react-icons/io5";
->>>>>>> tafiya
 
 const TabSection = () => {
   return (
@@ -24,51 +21,11 @@ const TabSection = () => {
             tabContent: "group-data-[selected=true]:text-black",
           }}
         >
-<<<<<<< HEAD
-          <Tab key="photos" title="FEATURES" className=" bg-white border-0">
-=======
           <Tab key="feature" title="FEATURES" className=" bg-white border-0">
->>>>>>> tafiya
             <div>
               <div className="relative overflow-x-auto ">
                 <table className="w-full text-sm text-left rtl:text-right text-black ">
                   <tbody>
-<<<<<<< HEAD
-                    {[1, 2, 3, 4].map((element) => (
-                      <tr key={1} className="border-b  ">
-                        <th
-                          scope="row"
-                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap font-semibold"
-=======
-                    {/* {[1, 2, 3, 4].map((element) => (
-                      <tr key={1} className="border-b text-start  ">
-                        <th
-                          scope="row"
-                          className="px-6 py-4  text-gray-900 whitespace-nowrap font-semibold"
->>>>>>> tafiya
-                        >
-                          Apple MacBook Pro 17"
-                        </th>
-                        <td className="px-6 py-4">Silver</td>
-                        <td className="px-6 py-4">Laptop</td>
-                        <td className="px-6 py-4">$2999</td>
-                        <td className="px-6 py-4">$2999</td>
-                      </tr>
-<<<<<<< HEAD
-                    ))}
-                    <tr className="border-b  ">
-                      <th
-                        scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap font-semibold"
-                      >
-                        Apple MacBook Pro 17"
-                      </th>
-                      <td className="px-6 py-4">Silver</td>
-                      <td className="px-6 py-4">Laptop</td>
-                      <td className="px-6 py-4">$2999</td>
-                      <td className="px-6 py-4">$2999</td>
-=======
-                    ))} */}
                     <tr className="border-b  ">
                       <th
                         scope="row"
@@ -90,7 +47,6 @@ const TabSection = () => {
                         <span className=" font-bold">Quick setup</span> <br />
                         Theme setup steps are minimal to allow for quick launch
                       </td>
-                    
                     </tr>
                     <tr className="border-b  ">
                       <th
@@ -169,30 +125,21 @@ const TabSection = () => {
                         Product discovery
                       </th>
                       <td className=" py-8 w-64">
-                      Breadcrumbs <br />
-                      Recommended products
+                        Breadcrumbs <br />
+                        Recommended products
                       </td>
+                      <td className=" py-8 w-64">Collection page navigation</td>
+                      <td className=" py-8 w-64">Enhanced search</td>
                       <td className=" py-8 w-64">
-                      Collection page navigation
+                        Product filtering and sorting
                       </td>
-                      <td className=" py-8 w-64">
-                      Enhanced search
-                      </td>
-                      <td className=" py-8 w-64">
-                      Product filtering and sorting
-                      </td>
->>>>>>> tafiya
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
           </Tab>
-<<<<<<< HEAD
-          <Tab key="music" title="REVIEWS">
-=======
           <Tab key="review" title="REVIEWS">
->>>>>>> tafiya
             <div>
               <div className="flex ">
                 <div className="w-1/4">
@@ -206,29 +153,6 @@ const TabSection = () => {
               </div>
             </div>
           </Tab>
-<<<<<<< HEAD
-          <Tab key="videos" title="SUPPORT AND DOCUMENTATION">
-            <div>
-              <div>
-                <div className="relative overflow-x-auto ">
-                  <table className="w-full text-sm text-left rtl:text-right text-black ">
-                    <tbody>
-                      <tr className="border-b  ">
-                        <th
-                          scope="row"
-                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap font-semibold"
-                        >
-                          Apple MacBook Pro 17"
-                        </th>
-                        <td className="px-6 py-4">Silver</td>
-                        <td className="px-6 py-4">Laptop</td>
-                        <td className="px-6 py-4">$2999</td>
-                        <td className="px-6 py-4">$2999</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-=======
           <Tab key="support" title="SUPPORT AND DOCUMENTATION">
             <div className=" flex md:gap-28 flex-col md:flex-row">
               <div>
@@ -267,7 +191,6 @@ const TabSection = () => {
               <div>
                 <h2 className=" text-xl font-bold mb-6">Release notes</h2>
                 <h2>No release notes available for this theme.</h2>
->>>>>>> tafiya
               </div>
             </div>
           </Tab>
