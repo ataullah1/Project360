@@ -44,16 +44,51 @@ const Navigation = () => {
                     </div>
                   </DropdownTrigger>
                   <DropdownMenu aria-label="Static Actions">
-                    <DropdownItem key="new"> Large catalogs</DropdownItem>
-                    <DropdownItem key="copy">Small catalogs</DropdownItem>
-                    <DropdownItem key="edit">Free themes</DropdownItem>
-                    <DropdownItem key="edit">Selling in person</DropdownItem>
-                    <DropdownItem key="edit">
-                      Selling internationally
+                    <DropdownItem key="new">
+                      {" "}
+                      <Link href={"/collections/largeCatalogs"}>
+                        Large catalogs
+                      </Link>
                     </DropdownItem>
-                    <DropdownItem key="edit">Minimalist style</DropdownItem>
-                    <DropdownItem key="edit">Trending this week</DropdownItem>
-                    <DropdownItem key="edit">New theme releases</DropdownItem>
+                    <DropdownItem key="copy">
+                      {" "}
+                      <Link href={"/collections/smallCatalogs"}>
+                        Small catalogs
+                      </Link>{" "}
+                    </DropdownItem>
+                    <DropdownItem key="edit">
+                      {" "}
+                      <Link href={"/collections/freeTheme"}>Free themes</Link>
+                    </DropdownItem>
+                    <DropdownItem key="edit">
+                      {" "}
+                      <Link href={"/collections/sellingPerson"}>
+                        Selling in person
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem key="edit">
+                      <Link href={"/collections/sellingInternational"}>
+                        Selling internationally
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem key="edit">
+                      {" "}
+                      <Link href={"/collections/minimalist"}>
+                        Minimalist style
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem key="edit">
+                      {" "}
+                      <Link href={"/collections/trending"}>
+                        Trending this week
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem key="edit">
+                      {" "}
+                      <Link href={"/collections/newTheme"}>
+                        New theme releases
+                      </Link>
+                    </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
               </li>
