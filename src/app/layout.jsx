@@ -5,7 +5,7 @@ import Navigation from "@/Components/nav/page";
 import Footer from "@/Components/footer/page";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import QueryProvider from "./Providers/queryProvider";
-
+require("dotenv").config();
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -14,6 +14,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // console.log(process.env.THEME_API);
+
   return (
     <html lang="en" className={inter.className}>
       <body>
