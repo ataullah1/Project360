@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-const ThemeCard = () => {
+const ThemeCard = ({ data }) => {
+  console.log(data);
   return (
     <div className="rounded-md shadow-md shadow-slate-200">
       {/* Image */}
@@ -20,6 +21,7 @@ const ThemeCard = () => {
           ></div>
         </div>
       </Link>
+
       <div className="p-3">
         <div className="flex items-center justify-between">
           <h1 className="text-xl font-semibold">Retro</h1>

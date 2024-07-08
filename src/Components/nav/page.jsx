@@ -23,10 +23,9 @@ import {
 import Link from "next/link";
 import { ImCross } from "react-icons/im";
 
-
 const Navigation = () => {
   const [show, setShow] = useState("hidden");
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const handleSearchbar = () => {
     setShow("");
@@ -110,11 +109,9 @@ const Navigation = () => {
     </>
   );
 
-
   return (
     <div className="w-full h-20 flex  bg-white fixed top-0 left-0 right-0 z-40">
-      <nav className="max-w-[1400px] mx-auto h-20 flex items-center justify-between px-2 lg:px-0 md:px-0 bg-white fixed top-0 left-0 right-0 z-40">
-        {/* logo */}
+      <nav className="w-10/12 mx-auto h-20 flex items-center justify-between px-2 lg:px-0 md:px-0 bg-white fixed top-0 left-0 right-0 z-40">
         <div className="flex gap-16">
           <Link href={"/"}>
             <div className="flex gap-1 items-center">
@@ -127,7 +124,65 @@ const Navigation = () => {
           </Link>
           <div className="flex">
             <ul className="hidden md:flex lg:flex gap-7 font-medium">
-              {menuItems}
+              <li className="">
+                <Dropdown>
+                  <DropdownTrigger>
+                    <div className="flex gap-2 items-center">
+                      Collections <FaAngleDown />
+                    </div>
+                  </DropdownTrigger>
+                  <DropdownMenu aria-label="Static Actions">
+                    <DropdownItem key="new">
+                      {" "}
+                      <Link href={"/collections/largeCatalogs"}>
+                        Large catalogs
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem key="copy">
+                      {" "}
+                      <Link href={"/collections/smallCatalogs"}>
+                        Small catalogs
+                      </Link>{" "}
+                    </DropdownItem>
+                    <DropdownItem key="edit">
+                      {" "}
+                      <Link href={"/collections/freeTheme"}>Free themes</Link>
+                    </DropdownItem>
+                    <DropdownItem key="edit">
+                      {" "}
+                      <Link href={"/collections/sellingPerson"}>
+                        Selling in person
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem key="edit">
+                      <Link href={"/collections/sellingInternational"}>
+                        Selling internationally
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem key="edit">
+                      {" "}
+                      <Link href={"/collections/minimalist"}>
+                        Minimalist style
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem key="edit">
+                      {" "}
+                      <Link href={"/collections/trending"}>
+                        Trending this week
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem key="edit">
+                      {" "}
+                      <Link href={"/collections/newTheme"}>
+                        New theme releases
+                      </Link>
+                    </DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
+              </li>
+              <li>
+                <Link href={"/themes"}>All themes</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -142,91 +197,134 @@ const Navigation = () => {
 
           {/* menu  icon  */}
           <div className=" md:hidden lg:hidden text-2xl flex flex-col gap-2">
-        
-              {/* + icon  */}
-              <button onClick={onOpen} className="flex justify-center w-16 h-16 rounded-full items-center">
-                <GrMenu />
-              </button>
-              {/* icon container  */}
-             <Modal
-          className="overflow-y-auto"
-          backdrop="opaque"
-          isOpen={isOpen}
-          onOpenChange={onOpenChange}
-          radius="lg"
-          size="full"
-          hideCloseButton
-        >
-          <ModalContent>
-            {(onClose) => (
-              <>
-                <ModalHeader className="flex items-end justify-end  gap-1 border-b border-slate-200">
-                  <Button
-                    className="h-8 text-sm  rounded-full text-white bg-slate-900 font-semibold"
-                    onPress={onClose}
-                  >
-                    <ImCross />
-                  </Button>
-                </ModalHeader>
-                <ModalBody>
-                  <ul>
-                  <li className=" text-lg font-semibold ">
-        <Accordion selectionMode="multiple">
-          <AccordionItem key="1" aria-label="Collections" title="Collections">
-            <ul className=" text-base font-normal text-gray-900">
-              <li>
-                {" "}
-              <Link onClick={onClose}  href={"/collections/largeCatalogs"}>Large catalogs</Link>
-              </li>
-              <li>
-                {" "}
-                <Link onClick={onClose} href={"/collections/freeTheme"}>Free themes</Link>
-              </li>
-              <li>
-                <Link onClick={onClose}  href={"/collections/sellingPerson"}>
-                  Selling in person
-                </Link>
-              </li>
-              <li>
-                {" "}
-                <Link onClick={onClose}  href={"/collections/sellingInternational"}>
-                  Selling internationally
-                </Link>
-              </li>
-              <li>
-                {" "}
-                <Link onClick={onClose}  href={"/collections/minimalist"}>Minimalist style</Link>
-              </li>
-              <li>
-                <Link onClick={onClose}  href={"/collections/trending"}>Trending this week</Link>
-              </li>
-              <li>
-                {" "}
-                <Link onClick={onClose}  href={"/collections/newTheme"}>New theme releases</Link>
-              </li>
-            </ul>
-          </AccordionItem>
-        </Accordion>
-      </li>
-      <li className=" text-lg font-semibold ml-2">
-        <Link onClick={onClose}  href={"/themes"}>All themes</Link>
-       
-      </li>
-                  </ul>
-                
-                </ModalBody>
-              </>
-            )}
-          </ModalContent>
-        </Modal>
+            {/* + icon  */}
+            <button
+              onClick={onOpen}
+              className="flex justify-center w-16 h-16 rounded-full items-center"
+            >
+              <GrMenu />
+            </button>
+            {/* icon container  */}
+            <Modal
+              className="overflow-y-auto"
+              backdrop="opaque"
+              isOpen={isOpen}
+              onOpenChange={onOpenChange}
+              radius="lg"
+              size="full"
+              hideCloseButton
+            >
+              <ModalContent>
+                {(onClose) => (
+                  <>
+                    <ModalHeader className="flex items-end justify-end  gap-1 border-b border-slate-200">
+                      <Button
+                        className="h-8 text-sm  rounded-full text-white bg-slate-900 font-semibold"
+                        onPress={onClose}
+                      >
+                        <ImCross />
+                      </Button>
+                    </ModalHeader>
+                    <ModalBody>
+                      <ul>
+                        <li className=" text-lg font-semibold ">
+                          <Accordion selectionMode="multiple">
+                            <AccordionItem
+                              key="1"
+                              aria-label="Collections"
+                              title="Collections"
+                            >
+                              <ul className=" text-base font-normal text-gray-900">
+                                <li>
+                                  {" "}
+                                  <Link
+                                    onClick={onClose}
+                                    href={"/collections/largeCatalogs"}
+                                  >
+                                    Large catalogs
+                                  </Link>
+                                </li>
+                                <li>
+                                  {" "}
+                                  <Link
+                                    onClick={onClose}
+                                    href={"/collections/freeTheme"}
+                                  >
+                                    Free themes
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    onClick={onClose}
+                                    href={"/collections/sellingPerson"}
+                                  >
+                                    Selling in person
+                                  </Link>
+                                </li>
+                                <li>
+                                  {" "}
+                                  <Link
+                                    onClick={onClose}
+                                    href={"/collections/sellingInternational"}
+                                  >
+                                    Selling internationally
+                                  </Link>
+                                </li>
+                                <li>
+                                  {" "}
+                                  <Link
+                                    onClick={onClose}
+                                    href={"/collections/minimalist"}
+                                  >
+                                    Minimalist style
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    onClick={onClose}
+                                    href={"/collections/trending"}
+                                  >
+                                    Trending this week
+                                  </Link>
+                                </li>
+                                <li>
+                                  {" "}
+                                  <Link
+                                    onClick={onClose}
+                                    href={"/collections/newTheme"}
+                                  >
+                                    New theme releases
+                                  </Link>
+                                </li>
+                              </ul>
+                            </AccordionItem>
+                          </Accordion>
+                        </li>
+                        <li className=" text-lg font-semibold ml-2">
+                          <Link onClick={onClose} href={"/themes"}>
+                            All themes
+                          </Link>
+                        </li>
+                      </ul>
+                    </ModalBody>
+                  </>
+                )}
+              </ModalContent>
+            </Modal>
           </div>
           <div className="hidden md:flex lg:flex">
-            <button className="px-8 py-3 text-[#42474c] font-semibold">
+            <Link
+              href={"/login"}
+              className="px-8 py-3 text-[#42474c] font-semibold"
+            >
               Log in
-            </button>
-            <button className="px-6 py-3 bg-[#008060] hover:bg-white hover:text-black rounded-full font-medium text-white border border-black">
+            </Link>
+            <Link
+              href={"/signup"}
+              className="px-6 py-3 bg-[#008060] hover:bg-white hover:text-black rounded-full font-medium text-white border border-black"
+            >
               Sign in
-            </button>
+            </Link>
           </div>
         </div>
       </nav>

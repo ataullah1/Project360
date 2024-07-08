@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
       </aside>
 
-      <aside className="max-w-[1400px] mx-auto  flex justify-between border-b-2 border-[#ffffff] pb-6 ">
+      <aside className="w-10/12 mx-auto  flex justify-between border-b-2 border-[#ffffff] pb-6 ">
         {/* Online store */}
         <div className=" hidden lg:block md:block">
           <h4 className="text-white font-semibold mb-3">Online store</h4>
@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
       </aside>
 
-      <aside className="max-w-[1400px] mx-auto mt-4  lg:flex  md:flex justify-between  ">
+      <aside className="w-10/12 mx-auto mt-4  lg:flex  md:flex justify-between  ">
         <div className="text-[#b6babf]  flex gap-4">
           <p>Terms of Service</p>
           <p>Privacy Policy</p>

@@ -47,7 +47,6 @@ const TabSection = () => {
                         <span className=" font-bold">Quick setup</span> <br />
                         Theme setup steps are minimal to allow for quick launch
                       </td>
-                    
                     </tr>
                     <tr className="border-b  ">
                       <th
@@ -126,17 +125,13 @@ const TabSection = () => {
                         Product discovery
                       </th>
                       <td className=" py-8 w-64">
-                      Breadcrumbs <br />
-                      Recommended products
+                        Breadcrumbs <br />
+                        Recommended products
                       </td>
+                      <td className=" py-8 w-64">Collection page navigation</td>
+                      <td className=" py-8 w-64">Enhanced search</td>
                       <td className=" py-8 w-64">
-                      Collection page navigation
-                      </td>
-                      <td className=" py-8 w-64">
-                      Enhanced search
-                      </td>
-                      <td className=" py-8 w-64">
-                      Product filtering and sorting
+                        Product filtering and sorting
                       </td>
                     </tr>
                   </tbody>

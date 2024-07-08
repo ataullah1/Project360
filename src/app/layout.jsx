@@ -3,6 +3,7 @@ import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import Navigation from "@/Components/nav/page";
 import Footer from "@/Components/footer/page";
+import QueryProvider from "@/providers/QueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,12 @@ export default function RootLayout({ children }) {
     <html lang="en" className="bg-white">
       <body className={inter.className}>
         <NextUIProvider>
-          <Navigation></Navigation>
-          {children}
-          <Footer></Footer>
+          <QueryProvider>
+            <Navigation />
+
+            {children}
+            <Footer />
+          </QueryProvider>
         </NextUIProvider>
       </body>
     </html>
