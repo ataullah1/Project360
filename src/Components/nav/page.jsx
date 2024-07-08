@@ -108,10 +108,16 @@ const Navigation = () => {
             <GrMenu />
           </div>
           <div className="hidden md:flex lg:flex">
-            <Link href={'/login'} className="px-8 py-3 text-[#42474c] font-semibold">
+            <Link
+              href={"/login"}
+              className="px-8 py-3 text-[#42474c] font-semibold"
+            >
               Log in
             </Link>
-            <Link href={'/signup'} className="px-6 py-3 bg-[#008060] hover:bg-white hover:text-black rounded-full font-medium text-white border border-black">
+            <Link
+              href={"/signup"}
+              className="px-6 py-3 bg-[#008060] hover:bg-white hover:text-black rounded-full font-medium text-white border border-black"
+            >
               Sign in
             </Link>
           </div>
