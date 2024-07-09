@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import { FaQuoteLeft } from "react-icons/fa";
