@@ -1,3 +1,4 @@
+"use client";
 import HeroSection from "@/Components/home-page/HeroSection";
 import HomeCardSection from "@/Components/home-page/HomeCardSection";
 import HomeMarquee from "@/Components/home-page/HomeMarquee";

@@ -1,10 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 
 const ThemeCard = ({ dta }) => {
   // console.log(dta);
   const {
-    name,
+    name: themeName = "",
     includeSupport,
     price,
     featuredPhoneImage,
@@ -31,7 +33,7 @@ const ThemeCard = ({ dta }) => {
 
       <div className="p-3">
         <div className="flex items-center justify-between">
-          <h1 className="text-xl font-semibold">{name}</h1>
+          <h1 className="text-xl font-semibold">{themeName}</h1>
           <h1 className="text-xl font-semibold">
             ${price} <span className="text-base">USD</span>
           </h1>
