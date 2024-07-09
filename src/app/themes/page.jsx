@@ -14,7 +14,7 @@ import {
   Pagination,
   useDisclosure,
 } from "@nextui-org/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Themes = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -107,8 +107,8 @@ const Themes = () => {
             </div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-              {cards.map((data, i) => (
-                <ThemeCard data={data} key={i} />
+              {cards.map((dta) => (
+                <ThemeCard dta={dta} key={dta._id} />
               ))}
             </div>
           )}
