@@ -2,8 +2,12 @@
 import Link from "next/link";
 import React from "react";
 import ThemeCard from "../ThemeCard/ThemeCard";
+import useFetchQuery from "@/Hooks/shared/useFetch";
 
 const HomeCardSection = () => {
+  const { data, isLoading } = useFetchQuery("/themes");
+  const cards = data?.data || [];
+
   return (
     <div className="my-20">
       <div className="border-y py-20 grid md:grid-cols-2 grid-cols-1 gap-7">
@@ -54,16 +58,16 @@ const HomeCardSection = () => {
 
       {/* row card 4  */}
       <div className="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 mt-20 gap-10">
-        {[1, 2, 3, 4].map((element) => (
-          <ThemeCard key={1} />
-        ))}
+      {cards.slice(0,4).map((dta) => (
+                <ThemeCard dta={dta} key={dta._id} />
+              ))}
       </div>
 
       {/* row card 3  */}
       <div className="grid md:grid-cols-3 grid-cols-1 mt-20 gap-10">
-        {[1, 2, 3].map((element) => (
-          <ThemeCard key={1} />
-        ))}
+      {cards.slice(0,3).map((dta) => (
+                <ThemeCard dta={dta} key={dta._id} />
+              ))}
       </div>
     </div>
   );
