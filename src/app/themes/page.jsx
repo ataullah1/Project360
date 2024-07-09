@@ -3,7 +3,7 @@
 import DropdownSelectAccordion from "@/Components/DropdownSelectAccordion/DropdownSelectAccordion";
 import SelectDropdownFilter from "@/Components/SelectDropdownFilter/SelectDropdownFilter";
 import ThemeCard from "@/Components/ThemeCard/ThemeCard";
-import useFetchQuery from "@/Hooks/shared/useFetch";
+
 import { ImSpinner9 } from "react-icons/im";
 import {
   Button,
@@ -15,6 +15,7 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { useState } from "react";
+import useFetchQuery from "@/Hooks/shared/useFetch";
 
 const Themes = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -23,10 +24,10 @@ const Themes = () => {
 
   const { data, isLoading } = useFetchQuery("/themes");
   const cards = data?.data || [];
+  console.log(cards);
   // console.log("Is Loading: ", isLoading);
   return (
     <div className="mt-24">
-      <button onClick={() => {}}> fetch {page} </button>
       {/* Header Section  */}
       <div className="bg-[#fafafa]">
         <div className="py-8 md:py-12 w-11/12 mx-auto flex items-center justify-between">
