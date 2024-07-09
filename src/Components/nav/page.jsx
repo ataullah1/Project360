@@ -59,9 +59,12 @@ const Navigation = () => {
                 Small catalogs
               </Link>{" "}
             </DropdownItem>
-            <DropdownItem key="edit" >
+            <DropdownItem key="edit">
               {" "}
-              <Link href={"/collections/freeTheme"} className="font-semibold hover:underline ">
+              <Link
+                href={"/collections/freeTheme"}
+                className="font-semibold hover:underline "
+              >
                 Free themes
               </Link>
             </DropdownItem>
@@ -84,19 +87,28 @@ const Navigation = () => {
             </DropdownItem>
             <DropdownItem key="edit">
               {" "}
-              <Link href={"/collections/minimalist"} className="font-semibold hover:underline">
+              <Link
+                href={"/collections/minimalist"}
+                className="font-semibold hover:underline"
+              >
                 Minimalist style
               </Link>
             </DropdownItem>
             <DropdownItem key="edit">
               {" "}
-              <Link href={"/collections/trending"} className="font-semibold hover:underline">
+              <Link
+                href={"/collections/trending"}
+                className="font-semibold hover:underline"
+              >
                 Trending this week
               </Link>
             </DropdownItem>
             <DropdownItem key="edit">
               {" "}
-              <Link href={"/collections/newTheme"} className="font-semibold hover:underline">
+              <Link
+                href={"/collections/newTheme"}
+                className="font-semibold hover:underline"
+              >
                 New theme releases
               </Link>
             </DropdownItem>
@@ -111,7 +123,7 @@ const Navigation = () => {
 
   return (
     <div className="w-full h-20 flex  bg-white fixed top-0 left-0 right-0 z-40">
-      <nav className="w-10/12 mx-auto h-20 flex items-center justify-between px-2 lg:px-0 md:px-0 bg-white fixed top-0 left-0 right-0 z-40">
+      <nav className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto h-20 flex items-center justify-between px-2 2xl:px-0  bg-white fixed top-0 left-0 right-0 z-40">
         <div className="flex gap-16">
           <Link href={"/"}>
             <div className="flex gap-1 items-center">
@@ -124,7 +136,7 @@ const Navigation = () => {
           </Link>
           <div className="flex">
             <ul className="hidden md:flex lg:flex gap-7 font-medium">
-            {menuItems}
+              {menuItems}
             </ul>
           </div>
         </div>
