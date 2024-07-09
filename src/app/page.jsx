@@ -1,3 +1,5 @@
+"use client";
+
 import HeroSection from "@/Components/home-page/HeroSection";
 import HomeCardSection from "@/Components/home-page/HomeCardSection";
 import HomeMarquee from "@/Components/home-page/HomeMarquee";
@@ -15,7 +17,7 @@ export default function Home() {
   console.log("++++++++++++ AAAAAAA ++++++++++");
   return (
     <main>
-      <div className="w-10/12 mx-auto px-4 mt-20">
+      <div className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto px-4 mt-20">
         <HeroSection></HeroSection>
         <HomeCardSection></HomeCardSection>
       </div>

@@ -1,27 +1,33 @@
 /* eslint-disable jsx-a11y/alt-text */
+"use clinet";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
   return (
-    <div>
+    <div className="pt-10">
       <div>
-        <h1 className="text-8xl font-semibold text-[#212326]">
+        <h1 className="xl:text-7xl lg:text-5xl text-[40px] font-semibold text-[#212326]">
           Shopify themes— <br />
           built for commerce
         </h1>
-        <div className="flex justify-between gap-5">
-          <p className="text-3xl mt-5">
+        <div className="flex justify-between gap-5 lg:flex-row flex-col ">
+          <p className="xl:text-2xl text-xl mt-5 w-1/2">
             Take your store from launch to scale with themes that make selling
             easy.
           </p>
-          <button className="bg-black px-8 py-5 rounded-full text-white text-xl font-semibold hover:bg-black/80">
-            Explore themes
-          </button>
+          <div className="w-1/2 lg:flex items-end justify-end">
+            <Link href={"/themes"}>
+              <button className="bg-black px-7 w-[180px] py-3 rounded-full text-white text-[16px] font-semibold hover:bg-black/80">
+                Explore themes
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 grid-cols-1 mt-20 gap-10">
+      <div className="grid lg:grid-cols-2 grid-cols-1 mt-20 gap-10">
         <div>
           <div className="relative h-[500px] overflow-hidden border border-black rounded-3xl">
             <Image
@@ -68,7 +74,7 @@ const HeroSection = () => {
             <Image
               height={500}
               width={500}
-              alt=""
+              alt="imaggg"
               className="rounded-3xl"
               src="https://cdn.shopify.com/theme-store/9tv2f6wnl8gnbj5ij7r9n6pqjkgg.jpg"
             ></Image>
@@ -77,7 +83,7 @@ const HeroSection = () => {
               <Image
                 height={500}
                 width={500}
-                alt=""
+                alt="imaggg"
                 className="rounded-t-3xl h-full"
                 src="https://cdn.shopify.com/theme-store/2jei9ak1db2d0sgr9tbzsdm08lo6.jpg"
               ></Image>

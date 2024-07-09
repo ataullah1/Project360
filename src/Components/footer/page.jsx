@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { IoEarthOutline } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
