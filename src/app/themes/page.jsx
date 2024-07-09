@@ -4,6 +4,7 @@ import DropdownSelectAccordion from "@/Components/DropdownSelectAccordion/Dropdo
 import SelectDropdownFilter from "@/Components/SelectDropdownFilter/SelectDropdownFilter";
 import ThemeCard from "@/Components/ThemeCard/ThemeCard";
 import useFetchQuery from "@/Hooks/shared/useFetch";
+import { ImSpinner9 } from "react-icons/im";
 import {
   Button,
   Modal,
@@ -16,11 +17,13 @@ import {
 import { useEffect, useState } from "react";
 
 const Themes = () => {
-  const [cards, setCards] = useState([]);
-  const [page, setPage] = useState(1);
-
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
+  const [page, setPage] = useState(1);
+
+  const { data, isLoading } = useFetchQuery("/themes");
+  const cards = data?.data || [];
+  console.log("Is Loading: ", isLoading);
   return (
     <div className="mt-24">
       <button onClick={() => {}}> fetch {page} </button>
@@ -96,11 +99,19 @@ const Themes = () => {
           </div>
 
           {/* All Card Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-            {cards.map((data, i) => (
-              <ThemeCard data={data} key={i} />
-            ))}
-          </div>
+          {isLoading ? (
+            <div className=" w-full min-h-96 flex items-center justify-center">
+              <span className="text-6xl animate-spin">
+                <ImSpinner9 />
+              </span>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+              {cards.map((data, i) => (
+                <ThemeCard data={data} key={i} />
+              ))}
+            </div>
+          )}
 
           <div className="w-full flex items-center justify-center my-14">
             <Pagination
@@ -111,7 +122,7 @@ const Themes = () => {
               size="lg"
               variant="light"
               color="default"
-              total={20}
+              total={20 || 0}
               siblings={3}
               initialPage={1}
             />
