@@ -1,10 +1,14 @@
 "use client";
 import Header from "@/Components/HeadingComponents/Header";
 import ThemeCard from "@/Components/ThemeCard/ThemeCard";
+import useFetchQuery from "@/Hooks/shared/useFetch";
 import React from "react";
 import { ImSpinner9 } from "react-icons/im";
 
 const SmallCatalogs = () => {
+  const { data, isLoading } = useFetchQuery("/themes");
+  const cards = data?.data || [];
+  // console.log("Is Loading: ", isLoading);
   return (
     <div className="mt-24">
       <Header

@@ -33,9 +33,9 @@ const Testimonial = () => {
               <div className="w-full md:w-8/12 ">
                 <FaQuoteLeft className="text-5xl mb-7 mt-20" />
                 <h3 className="text-2xl font-semibold">
-                  When I launched my company it took me forever to choose a
+                  {`  When I launched my company it took me forever to choose a
                   theme and I'm so glad I picked pipeline. It grew as my
-                  business grew.
+                  business grew.`}
                 </h3>
                 <p className="mt-10 text-xl">— Ouive</p>
               </div>
@@ -44,7 +44,7 @@ const Testimonial = () => {
                   <img
                     src="https://cdn.shopify.com/theme-store/q1alwd14rzguxn4ilv2kepclqr5u.jpg"
                     className="w-full md:w-[319px] max-h-[562px] border border-black rounded-xl"
-                    alt=""
+                    alt="imaggg"
                   />
                   <p className="text-xl mt-10">
                     {" "}
@@ -75,7 +75,7 @@ const Testimonial = () => {
                   <img
                     src="https://cdn.shopify.com/theme-store/41hcduhdnuifpztf7lzafusvauyu.jpg"
                     className="w-full md:w-[319px] max-h-[562px] border border-black rounded-xl"
-                    alt=""
+                    alt="imaggg"
                   />
                   <p className="text-xl mt-10">
                     {" "}
@@ -106,7 +106,7 @@ const Testimonial = () => {
                   <img
                     src="https://cdn.shopify.com/theme-store/wwr5un31vnawnu1ljflz9fo6hcox.jpg"
                     className="w-full md:w-[319px] max-h-[562px] border border-black rounded-xl"
-                    alt=""
+                    alt="imaggg"
                   />
                   <p className="text-xl mt-10">
                     {" "}

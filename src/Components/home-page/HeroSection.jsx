@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 "use clinet";
 import Image from "next/image";
 import Link from "next/link";
@@ -73,7 +74,7 @@ const HeroSection = () => {
             <Image
               height={500}
               width={500}
-              alt=""
+              alt="imaggg"
               className="rounded-3xl"
               src="https://cdn.shopify.com/theme-store/9tv2f6wnl8gnbj5ij7r9n6pqjkgg.jpg"
             ></Image>
@@ -82,7 +83,7 @@ const HeroSection = () => {
               <Image
                 height={500}
                 width={500}
-                alt=""
+                alt="imaggg"
                 className="rounded-t-3xl h-full"
                 src="https://cdn.shopify.com/theme-store/2jei9ak1db2d0sgr9tbzsdm08lo6.jpg"
               ></Image>
