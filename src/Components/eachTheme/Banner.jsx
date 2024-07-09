@@ -11,6 +11,7 @@ const Banner = () => {
   return (
     <div className="bg-black text-white">
       <div className="  py-16 max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 ">
+        {/* description section */}
         <div className="lg:w-1/3 w-full text-center lg:text-left">
           <h1 className="text-4xl ">
             Polyform{" "}
@@ -57,6 +58,7 @@ const Banner = () => {
             . Pay if you publish.
           </p>
         </div>
+        {/* image card section */}
         <div className="lg:w-2/3 h-[580px] overflow-hidden rounded-xl ">
           <img
             src="https://cdn.shopify.com/theme-store/qumk1q6o0adk0lzvfybn0xfr4rl3.jpg"

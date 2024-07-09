@@ -24,6 +24,7 @@ import {
 } from "@nextui-org/react";
 import Link from "next/link";
 import { ImCross } from "react-icons/im";
+import { FaRegUserCircle } from "react-icons/fa";
 
 const Navigation = () => {
   const [show, setShow] = useState("hidden");
@@ -144,12 +145,54 @@ const Navigation = () => {
         </div>
 
         <div className="flex items-center gap-4">
+
+
+
+
+
           {/* search icon  */}
-          <div className="text-3xl">
+
+          <div className="text-3xl mt-2 mr-4">
             <button onClick={handleSearchbar}>
               <IoSearch />
             </button>
           </div>
+
+          <Dropdown>
+          <DropdownTrigger>
+            {/* LOGIN icon  */}
+
+            <div className="">
+
+             
+                <div className="text-3xl flex justify-center items-center cursor-pointer   ">
+                <FaRegUserCircle />
+                </div>
+     
+            </div>
+          </DropdownTrigger>
+          <DropdownMenu aria-label="Static Actions" className=" px-2">
+          <DropdownItem key="new" className=" mb-1 ">
+          <h3 className=" text-center  font-semibold">MD Zobayer hossen</h3>
+            </DropdownItem>
+           
+            
+          <DropdownItem key="new">
+          <h3 className="  font-semibold">Payment history</h3>
+            </DropdownItem>
+            
+          <DropdownItem key="new">
+          <h3 className="   font-semibold">My Order</h3>
+            </DropdownItem>
+            
+         
+              
+          </DropdownMenu>
+        </Dropdown>
+
+
+          
+
 
           {/* menu  icon  */}
           <div className=" md:hidden lg:hidden text-2xl flex flex-col gap-2">

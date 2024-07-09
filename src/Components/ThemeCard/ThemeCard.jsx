@@ -13,7 +13,7 @@ const ThemeCard = ({ dta }) => {
   //   featuredDesktopImage,
   // } = dta;
   return (
-    <div className="rounded-md shadow-md shadow-slate-200">
+    <div className="rounded-md shadow-md shadow-slate-200 w-full">
       {/* Image */}
       <Link href={`/themes/${1}`}>
         <div
