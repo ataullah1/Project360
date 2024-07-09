@@ -3,7 +3,7 @@
 import { FaQuoteLeft } from "react-icons/fa";
 import "./style/componentStyle.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { FaLongArrowAltLeft } from "react-icons/fa";
+import { LuMoveLeft, LuMoveRight } from "react-icons/lu";
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -66,16 +66,14 @@ const Testimonial = () => {
               <div className="w-full md:w-8/12 ">
                 <FaQuoteLeft className="text-5xl mb-7 mt-20" />
                 <h3 className="text-2xl font-semibold">
-                  When I launched my company it took me forever to choose a
-                  theme and I'm so glad I picked pipeline. It grew as my
-                  business grew.
+                So unique and unlike any other theme. Also the support team responds quickly and has helped so much.
                 </h3>
-                <p className="mt-10 text-xl">— Ouive</p>
+                <p className="mt-10 text-xl">— Maison Rue</p>
               </div>
               <div className="w-full md:w-1/3 lg:ml-36 pb-16">
                 <div className="text-center inline-block w-full">
                   <img
-                    src="https://cdn.shopify.com/theme-store/q1alwd14rzguxn4ilv2kepclqr5u.jpg"
+                    src="https://cdn.shopify.com/theme-store/41hcduhdnuifpztf7lzafusvauyu.jpg"
                     className="w-full md:w-[319px] max-h-[562px] border border-black rounded-xl"
                     alt=""
                   />
@@ -98,16 +96,14 @@ const Testimonial = () => {
               <div className="w-full md:w-8/12 ">
                 <FaQuoteLeft className="text-5xl mb-7 mt-20" />
                 <h3 className="text-2xl font-semibold">
-                  When I launched my company it took me forever to choose a
-                  theme and I'm so glad I picked pipeline. It grew as my
-                  business grew.
+                The theme is easily customised with clean and stylish sections that work great on both mobile and desktop.
                 </h3>
-                <p className="mt-10 text-xl">— Ouive</p>
+                <p className="mt-10 text-xl">— Illusions Lingerie</p>
               </div>
               <div className="w-full md:w-1/3 lg:ml-36 pb-16">
                 <div className="text-center inline-block w-full">
                   <img
-                    src="https://cdn.shopify.com/theme-store/q1alwd14rzguxn4ilv2kepclqr5u.jpg"
+                    src="https://cdn.shopify.com/theme-store/wwr5un31vnawnu1ljflz9fo6hcox.jpg"
                     className="w-full md:w-[319px] max-h-[562px] border border-black rounded-xl"
                     alt=""
                   />
@@ -128,11 +124,11 @@ const Testimonial = () => {
         </Swiper>
         <button className="arrow-left arrow absolute bottom-10 md:bottom-auto left-[40%] -translate-x-1/2 md:-translate-x-0 md:top-[480px] md:left-40 z-50 cursor-pointer">
           {" "}
-          <FaLongArrowAltRight className="text-4xl" />{" "}
+          <LuMoveRight className="text-4xl" />{" "}
         </button>
         <button className="arrow-right arrow absolute bottom-10 md:bottom-auto left-[60%] md:left-auto -translate-x-1/2 md:-translate-x-0  md:top-[480px]  z-50 cursor-pointer">
           {" "}
-          <FaLongArrowAltLeft className="text-4xl" />{" "}
+          <LuMoveLeft className="text-4xl" />{" "}
         </button>
       </div>
     </div>

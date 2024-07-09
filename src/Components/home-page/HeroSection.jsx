@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -16,9 +17,10 @@ const HeroSection = () => {
             easy.
           </p>
           <div className="w-1/2 lg:flex items-end justify-end">
-          <button className="bg-black px-7 w-[180px] py-3 rounded-full text-white text-[16px] font-semibold hover:bg-black/80">
+          <Link href={"/themes"}><button className="bg-black px-7 w-[180px] py-3 rounded-full text-white text-[16px] font-semibold hover:bg-black/80">
             Explore themes
-          </button>
+          </button></Link>
+          
           </div>
         </div>
       </div>
