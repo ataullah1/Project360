@@ -1,6 +1,6 @@
+"use clinet";
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
 import ThemeCard from "../ThemeCard/ThemeCard";
 
 const HomeCardSection = () => {

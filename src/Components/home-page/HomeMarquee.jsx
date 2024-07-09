@@ -1,3 +1,5 @@
+"use clinet";
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
@@ -81,7 +83,7 @@ const HomeMarquee = () => {
       </Marquee>
 
       <Marquee pauseOnHover={true} direction={"right"} className="mt-10">
-      <div className="h-[470px] w-[380px] mr-12 relative group overflow-hidden">
+        <div className="h-[470px] w-[380px] mr-12 relative group overflow-hidden">
           <Image
             fill
             className="w-full h-[550px] border border-black rounded-xl"

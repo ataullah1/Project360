@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import { FaQuoteLeft } from "react-icons/fa";
 import "./style/componentStyle.css";
-import { FaLongArrowAltRight } from "react-icons/fa";
 import { LuMoveLeft, LuMoveRight } from "react-icons/lu";
 
 import React from "react";
@@ -13,7 +12,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 
-import Image from "next/image";
 import Link from "next/link";
 
 const Testimonial = () => {
@@ -66,7 +64,8 @@ const Testimonial = () => {
               <div className="w-full md:w-8/12 ">
                 <FaQuoteLeft className="text-5xl mb-7 mt-20" />
                 <h3 className="text-2xl font-semibold">
-                So unique and unlike any other theme. Also the support team responds quickly and has helped so much.
+                  So unique and unlike any other theme. Also the support team
+                  responds quickly and has helped so much.
                 </h3>
                 <p className="mt-10 text-xl">— Maison Rue</p>
               </div>
@@ -96,7 +95,8 @@ const Testimonial = () => {
               <div className="w-full md:w-8/12 ">
                 <FaQuoteLeft className="text-5xl mb-7 mt-20" />
                 <h3 className="text-2xl font-semibold">
-                The theme is easily customised with clean and stylish sections that work great on both mobile and desktop.
+                  The theme is easily customised with clean and stylish sections
+                  that work great on both mobile and desktop.
                 </h3>
                 <p className="mt-10 text-xl">— Illusions Lingerie</p>
               </div>
