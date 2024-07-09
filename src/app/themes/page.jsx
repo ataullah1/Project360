@@ -23,7 +23,7 @@ const Themes = () => {
 
   const { data, isLoading } = useFetchQuery("/themes");
   const cards = data?.data || [];
-  console.log("Is Loading: ", isLoading);
+  // console.log("Is Loading: ", isLoading);
   return (
     <div className="mt-24">
       <button onClick={() => {}}> fetch {page} </button>
@@ -48,7 +48,6 @@ const Themes = () => {
         <div className="w-full md:w-1/3 lg:w-1/4 bg-[#fafafa] p-3 min-h-28 rounded-md hidden md:block">
           <DropdownSelectAccordion />
         </div>
-
         {/* Left part: dropdown-Select-Accordion resopnsive modal */}
         <Modal
           className="overflow-y-auto"
@@ -83,7 +82,6 @@ const Themes = () => {
             )}
           </ModalContent>
         </Modal>
-
         {/* Right Part: All Templates  */}
         <div className="w-full md:w-3/4 p-3">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-6 w-full">
@@ -97,7 +95,6 @@ const Themes = () => {
               <SelectDropdownFilter />
             </div>
           </div>
-
           {/* All Card Section */}
           {isLoading ? (
             <div className=" w-full min-h-96 flex items-center justify-center">
