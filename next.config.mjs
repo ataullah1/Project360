@@ -7,6 +7,7 @@ const nextConfig = {
         hostname: "cdn.shopify.com",
       },
       {
+        // cloudinary add
         protocol: "https",
         hostname: "res.cloudinary.com",
       },
