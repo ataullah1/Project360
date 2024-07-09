@@ -47,7 +47,7 @@ const Navigation = () => {
               {" "}
               <Link
                 href={"/collections/largeCatalogs"}
-                className="font-semibold "
+                className="font-semibold hover:underline "
               >
                 Large catalogs
               </Link>
@@ -56,14 +56,14 @@ const Navigation = () => {
               {" "}
               <Link
                 href={"/collections/smallCatalogs"}
-                className="font-semibold "
+                className="font-semibold hover:underline "
               >
                 Small catalogs
               </Link>{" "}
             </DropdownItem>
-            <DropdownItem key="edit">
+            <DropdownItem key="edit" >
               {" "}
-              <Link href={"/collections/freeTheme"} className="font-semibold ">
+              <Link href={"/collections/freeTheme"} className="font-semibold hover:underline ">
                 Free themes
               </Link>
             </DropdownItem>
@@ -71,7 +71,7 @@ const Navigation = () => {
               {" "}
               <Link
                 href={"/collections/sellingPerson"}
-                className="font-semibold "
+                className="font-semibold hover:underline "
               >
                 Selling in person
               </Link>
@@ -79,26 +79,26 @@ const Navigation = () => {
             <DropdownItem key="edit">
               <Link
                 href={"/collections/sellingInternational"}
-                className="font-semibold"
+                className="font-semibold hover:underline"
               >
                 Selling internationally
               </Link>
             </DropdownItem>
             <DropdownItem key="edit">
               {" "}
-              <Link href={"/collections/minimalist"} className="font-semibold">
+              <Link href={"/collections/minimalist"} className="font-semibold hover:underline">
                 Minimalist style
               </Link>
             </DropdownItem>
             <DropdownItem key="edit">
               {" "}
-              <Link href={"/collections/trending"} className="font-semibold">
+              <Link href={"/collections/trending"} className="font-semibold hover:underline">
                 Trending this week
               </Link>
             </DropdownItem>
             <DropdownItem key="edit">
               {" "}
-              <Link href={"/collections/newTheme"} className="font-semibold">
+              <Link href={"/collections/newTheme"} className="font-semibold hover:underline">
                 New theme releases
               </Link>
             </DropdownItem>
@@ -126,65 +126,7 @@ const Navigation = () => {
           </Link>
           <div className="flex">
             <ul className="hidden md:flex lg:flex gap-7 font-medium">
-              <li className="">
-                <Dropdown>
-                  <DropdownTrigger>
-                    <div className="flex gap-2 items-center">
-                      Collections <FaAngleDown />
-                    </div>
-                  </DropdownTrigger>
-                  <DropdownMenu aria-label="Static Actions">
-                    <DropdownItem key="new">
-                      {" "}
-                      <Link href={"/collections/largeCatalogs"}>
-                        Large catalogs
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="copy">
-                      {" "}
-                      <Link href={"/collections/smallCatalogs"}>
-                        Small catalogs
-                      </Link>{" "}
-                    </DropdownItem>
-                    <DropdownItem key="edit">
-                      {" "}
-                      <Link href={"/collections/freeTheme"}>Free themes</Link>
-                    </DropdownItem>
-                    <DropdownItem key="edit">
-                      {" "}
-                      <Link href={"/collections/sellingPerson"}>
-                        Selling in person
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="edit">
-                      <Link href={"/collections/sellingInternational"}>
-                        Selling internationally
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="edit">
-                      {" "}
-                      <Link href={"/collections/minimalist"}>
-                        Minimalist style
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="edit">
-                      {" "}
-                      <Link href={"/collections/trending"}>
-                        Trending this week
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="edit">
-                      {" "}
-                      <Link href={"/collections/newTheme"}>
-                        New theme releases
-                      </Link>
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown>
-              </li>
-              <li>
-                <Link href={"/themes"}>All themes</Link>
-              </li>
+            {menuItems}
             </ul>
           </div>
         </div>
