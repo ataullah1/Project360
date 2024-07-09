@@ -2,6 +2,7 @@
 
 import Header from "@/Components/HeadingComponents/Header";
 import ThemeCard from "@/Components/ThemeCard/ThemeCard";
+import useFetchQuery from "@/Hooks/shared/useFetch";
 import React from "react";
 import { ImSpinner9 } from "react-icons/im";
 

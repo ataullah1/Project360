@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 "use clinet";
 import useFetchQuery from "@/Hooks/shared/useFetch";
 import Image from "next/image";
@@ -31,10 +32,9 @@ const HeroSection = () => {
       </div>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-20 gap-10">
-      {cards.slice(0,2).map((dta) => (
-                <ThemeCard dta={dta} key={dta._id} />
-              ))}
-
+        {cards.slice(0, 2).map((dta) => (
+          <ThemeCard dta={dta} key={dta._id} />
+        ))}
       </div>
     </div>
   );
