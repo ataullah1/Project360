@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const usePostMutate = (route, onSuccess = () => {}, onError = () => {}) => {
   const Axios = useAxiosSecure();
-  const token = Cookies.get("user");
+  const token = Cookies.get("token");
   const queryClient = useQueryClient();
 const [error,setError]=useState(null)
   const { mutate, isPending } = useMutation({

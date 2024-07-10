@@ -4,22 +4,50 @@ import { Divider, Spinner } from "@nextui-org/react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import usePostMutate from "@/Hooks/shared/usePostMutate";
 import { useForm } from "react-hook-form";
+import Cookies from "js-cookie";
+import { jwtDecode } from "jwt-decode";
 
 const Login = () => {
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
-  const { mutate, isPending,error,setError } = usePostMutate("auth/login");
+  const [error, setError] = useState(null);
+
+  const onError = (err) => {
+ console.log(err)
+ setError(err)
+
+  }
+  const onSuccess = (data) => {
+    console.log(data.data.data.accessToken)
+    try {
+      const decoded = jwtDecode(data.data.data.accessToken);
+      console.log(decoded)
+      
+    } catch (error) {
+      console.error("Error decoding token:", error);
+      setError("An error occurred while login");
+      
+    }
+
+    Cookies.set("token", data.data.data.accessToken) ;
+  }
+
+  const { mutate, isPending, }  = usePostMutate("auth/login", onSuccess, onError);
+
   const [loginError, setLoginError ] = useState("");
+
+
+  
+
 
   const onSubmit = async (data) => {
     try {
-      const response = await mutate(data);
-      console.log("Response:", response);
-      // Optionally handle success
+       mutate(data);
+
       setError(null)
     } catch (error) {
-      console.error("Error:", error);
+      // console.error("Error:", error);
       // Check if the error object has a response property and handle it accordingly
-      setLoginError(error.response?.data?.message || error.message || "An error occurred");
+      // setLoginError(error.response?.data?.message || error.message || "An error occurred");
     }
   };
 
