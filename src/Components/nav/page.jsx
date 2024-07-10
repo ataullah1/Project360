@@ -24,7 +24,7 @@ import Link from "next/link";
 import { ImCross } from "react-icons/im";
 import { FaRegUserCircle } from "react-icons/fa";
 
-const Navigation = () => {
+const Navigation = ({ scrolld, handleScrollTop }) => {
   const [show, setShow] = useState("hidden");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -123,10 +123,10 @@ const Navigation = () => {
   );
 
   return (
-    <div className="w-full h-20 flex  bg-white fixed top-0 left-0 right-0 z-40">
-      <nav className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto h-20 flex items-center justify-between px-2 2xl:px-0  bg-white fixed top-0 left-0 right-0 z-40">
+    <div className="w-full h-20 flex  bg-transparent fixed top-0 left-0 right-0 z-40">
+      <nav className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto h-20 flex items-center justify-between px-2 2xl:px-0  bg-transparent fixed top-0 left-0 right-0 z-40">
         <div className="flex gap-16">
-          <Link href={"/"}>
+          <Link href={"/"} onClick={handleScrollTop}>
             <div className="flex gap-1 items-center">
               <img
                 src="https://i.ibb.co/jgzQqq1/edit.png"
@@ -143,11 +143,6 @@ const Navigation = () => {
         </div>
 
         <div className="flex items-center gap-4">
-
-
-
-
-
           {/* search icon  */}
 
           <div className="text-3xl mt-2 mr-4 hover:text-primaryColor">
@@ -157,41 +152,34 @@ const Navigation = () => {
           </div>
 
           <Dropdown>
-          <DropdownTrigger>
-            {/* LOGIN icon  */}
+            <DropdownTrigger>
+              {/* LOGIN icon  */}
 
-            <div className="">
-
-             
+              <div className="">
                 <div className="text-3xl flex justify-center items-center cursor-pointer hover:text-primaryColor   ">
-                <FaRegUserCircle />
+                  <FaRegUserCircle />
                 </div>
-     
-            </div>
-          </DropdownTrigger>
-          <DropdownMenu aria-label="Static Actions" className=" px-2">
-          <DropdownItem key="new" className=" mb-1 ">
-          <h3 className=" text-center  font-semibold">MD Zobayer hossen</h3>
-            </DropdownItem>
-           
-            
-          <DropdownItem key="new">
-      <Link href={'/myorder'}>  <h3 className="   font-semibold">My Order</h3>   </Link>
-            </DropdownItem>
-            
-          <DropdownItem key="new">
-          <h3 className="  font-semibold">Payment history</h3>
-         
-            </DropdownItem>
-            
-         
-              
-          </DropdownMenu>
-        </Dropdown>
+              </div>
+            </DropdownTrigger>
+            <DropdownMenu aria-label="Static Actions" className=" px-2">
+              <DropdownItem key="new" className=" mb-1 ">
+                <h3 className=" text-center  font-semibold">
+                  MD Zobayer hossen
+                </h3>
+              </DropdownItem>
 
+              <DropdownItem key="new">
+                <Link href={"/myorder"}>
+                  {" "}
+                  <h3 className="   font-semibold">My Order</h3>{" "}
+                </Link>
+              </DropdownItem>
 
-          
-
+              <DropdownItem key="new">
+                <h3 className="  font-semibold">Payment history</h3>
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
 
           {/* menu  icon  */}
           <div className=" md:hidden lg:hidden text-2xl flex flex-col gap-2">
