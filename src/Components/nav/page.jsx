@@ -152,7 +152,7 @@ const Navigation = () => {
 
           {/* search icon  */}
 
-          <div className="text-3xl mt-2 mr-4">
+          <div className="text-3xl mt-2 mr-4 hover:text-primaryColor">
             <button onClick={handleSearchbar}>
               <IoSearch />
             </button>
@@ -165,7 +165,7 @@ const Navigation = () => {
             <div className="">
 
              
-                <div className="text-3xl flex justify-center items-center cursor-pointer   ">
+                <div className="text-3xl flex justify-center items-center cursor-pointer hover:text-primaryColor   ">
                 <FaRegUserCircle />
                 </div>
      
@@ -178,11 +178,12 @@ const Navigation = () => {
            
             
           <DropdownItem key="new">
-          <h3 className="  font-semibold">Payment history</h3>
+      <Link href={'/myorder'}>  <h3 className="   font-semibold">My Order</h3>   </Link>
             </DropdownItem>
             
           <DropdownItem key="new">
-          <h3 className="   font-semibold">My Order</h3>
+          <h3 className="  font-semibold">Payment history</h3>
+         
             </DropdownItem>
             
          
@@ -320,7 +321,7 @@ const Navigation = () => {
             </Link>
             <Link
               href={"/signup"}
-              className="px-6 py-3 bg-[#008060] hover:bg-white hover:text-black rounded-full font-medium text-white border border-black"
+              className="px-6 py-3 bg-primaryColor hover:bg-white hover:text-primaryColor rounded-full font-medium text-white border-2 border-primaryColor"
             >
               Sign in
             </Link>

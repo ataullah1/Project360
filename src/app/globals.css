@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,11 +7,9 @@
 
 *,
 body {
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
+  font-family: "Montserrat", sans-serif;
 }
-
-
-
 
 /* Login signup background gredient */
 .css-selector {
@@ -24,6 +23,7 @@ body {
 }
 
 @-webkit-keyframes AnimationName {
+<<<<<<< HEAD
   0%{background-position:59% 0%}
   50%{background-position:42% 100%}
   100%{background-position:59% 0%}
@@ -43,3 +43,93 @@ body {
   50%{background-position:42% 100%}
   100%{background-position:59% 0%}
 }
+=======
+  0% {
+    background-position: 0% 88%;
+  }
+  50% {
+    background-position: 100% 13%;
+  }
+  100% {
+    background-position: 0% 88%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 88%;
+  }
+  50% {
+    background-position: 100% 13%;
+  }
+  100% {
+    background-position: 0% 88%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 88%;
+  }
+  50% {
+    background-position: 100% 13%;
+  }
+  100% {
+    background-position: 0% 88%;
+  }
+}
+
+/* ROund text animet  */
+
+.showreels-btn {
+  width: 25%;
+  height: 25%;
+  display: block;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  -ms-transform: translate(-55%, -50%);
+  transform: translate(-55%, -50%);
+}
+
+.showreels-div:hover .showreels-video {
+  display: block;
+}
+
+.showreels-div:hover .showreels-btn {
+  display: none;
+}
+
+.circle-text {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  fill: #333;
+}
+
+.showreels-div {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+}
+
+.showreels-video {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.circle-svg {
+  height: 350px;
+  width: 350px;
+}
+.absolute-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+>>>>>>> init

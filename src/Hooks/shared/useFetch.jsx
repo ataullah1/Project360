@@ -6,7 +6,7 @@ import useAxiosSecure from "../useSecureApi";
 
 const useFetchQuery = (route, params = {}, enable = true) => {
   const Axios = useAxiosSecure();
-  const token = Cookies.get("user");
+  const token = Cookies.get("token");
 
   const { data, isSuccess, isLoading, refetch, isError, error } = useQuery({
     // queryKey: ["users", route, ...Object.values(params)],
