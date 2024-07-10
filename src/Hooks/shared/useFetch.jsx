@@ -9,7 +9,7 @@ const useFetchQuery = (route, params = {}, enable = true) => {
   const token = Cookies.get("token");
 
   const { data, isSuccess, isLoading, refetch, isError, error } = useQuery({
-    // queryKey: ["users", route, ...Object.values(params)],
+    queryKey: ["users", route, ...Object.values(params)],
     enabled: enable,
     queryFn: () =>
       Axios(route, {
