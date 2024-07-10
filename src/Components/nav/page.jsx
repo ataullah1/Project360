@@ -145,11 +145,6 @@ const Navigation = () => {
         </div>
 
         <div className="flex items-center gap-4">
-
-
-
-
-
           {/* search icon  */}
 
           <div className="text-3xl mt-2 mr-4 hover:text-primaryColor">
@@ -159,41 +154,30 @@ const Navigation = () => {
           </div>
 
           <Dropdown>
-          <DropdownTrigger>
-            {/* LOGIN icon  */}
+            <DropdownTrigger>
+              {/* LOGIN icon  */}
 
-            <div className="">
-
-             
+              <div className="">
                 <div className="text-3xl flex justify-center items-center cursor-pointer hover:text-primaryColor   ">
-                <FaRegUserCircle />
+                  <FaRegUserCircle />
                 </div>
-     
-            </div>
-          </DropdownTrigger>
-          <DropdownMenu aria-label="Static Actions" className=" px-2">
-          <DropdownItem key="new" className=" mb-1 ">
-          <h3 className=" text-center  font-semibold">MD Zobayer hossen</h3>
-            </DropdownItem>
-           
-            
-          <DropdownItem key="new">
-      <Link href={'/myorder'}>  <h3 className="   font-semibold">My Order</h3>   </Link>
-            </DropdownItem>
-            
-          <DropdownItem key="new">
-          <h3 className="  font-semibold">Payment history</h3>
-         
-            </DropdownItem>
-            
-         
-              
-          </DropdownMenu>
-        </Dropdown>
+              </div>
+            </DropdownTrigger>
+            <DropdownMenu aria-label="Static Actions" className=" px-2">
+              <DropdownItem key="new" className=" mb-1 ">
+                <h3 className=" text-center  font-semibold">
+                  MD Zobayer hossen
+                </h3>
+              </DropdownItem>
 
-
-          
-
+              <DropdownItem key="new">
+                <Link href={"/myorder"}>
+                  {" "}
+                  <h3 className="   font-semibold">My Profile</h3>{" "}
+                </Link>
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
 
           {/* menu  icon  */}
           <div className=" md:hidden lg:hidden text-2xl flex flex-col gap-2">

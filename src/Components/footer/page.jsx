@@ -14,7 +14,7 @@ const Footer = () => {
           your business for free
         </h3>
         <div className=" flex justify-center mt-5">
-          <button className="bg-primaryColor px-5 py-3 rounded-full font-semibold ">
+          <button className="bg-primaryColor px-5 text-white   py-3 rounded-full font-semibold ">
             Start free trial
           </button>
         </div>

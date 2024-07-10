@@ -1,11 +1,8 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import Navigation from "@/Components/nav/page";
 import Footer from "@/Components/footer/page";
 import QueryProvider from "@/providers/QueryProvider";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Shopyfy Themes",
@@ -16,12 +13,11 @@ export default function RootLayout({ children }) {
   // console.log(process.env.THEME_API);
 
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className="bg-white">
       <body>
         <NextUIProvider>
           <QueryProvider>
             <Navigation />
-
             {children}
             <Footer />
           </QueryProvider>

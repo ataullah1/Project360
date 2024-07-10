@@ -6,8 +6,9 @@ import { GrDocumentVerified } from "react-icons/gr";
 import { IoLocationSharp } from "react-icons/io5";
 
 const TabSection = () => {
+
   return (
-    <div className=" max-w-7xl mx-auto my-24">
+    <div className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto my-24">
       <div className="flex w-full flex-col">
         <Tabs
           aria-label="Options"
@@ -16,12 +17,12 @@ const TabSection = () => {
           classNames={{
             tabList:
               "gap-6 w-full relative rounded-none p-0 border-b border-divider",
-            cursor: "w-full bg-black",
+            cursor: "w-full bg-primaryColor",
             tab: "max-w-fit px-0 h-12",
-            tabContent: "group-data-[selected=true]:text-black",
+            tabContent: "group-data-[selected=true]:text-primaryColor",
           }}
         >
-          <Tab key="feature" title="FEATURES" className=" bg-white border-0">
+          <Tab key="feature" title="FEATURES"   className=" text-primaryColor bg-white border-0">
             <div>
               <div className="relative overflow-x-auto ">
                 <table className="w-full text-sm text-left rtl:text-right text-black ">

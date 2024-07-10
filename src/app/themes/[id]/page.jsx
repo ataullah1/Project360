@@ -5,16 +5,21 @@ import Sandbox from "@/Components/eachTheme/Sandbox";
 import Stories from "@/Components/eachTheme/Stories";
 import TabSection from "@/Components/eachTheme/TabSection";
 import WebCard from "@/Components/eachTheme/WebCard";
+// import useFetchQuery from "@/Hooks/shared/useFetch";
+
 import React from "react";
 
 const page = ({ params }) => {
   const id = params;
-  console.log(id);
+  // const { data, isLoading } = useFetchQuery(`/themes/${id}`);
+  // const cards = data?.data || [];
+
+  // console.log(cards);
   return (
     <div className="mt-12">
       <Banner></Banner>
       <CardSection></CardSection>
-      <WebCard></WebCard>
+      {/* <WebCard></WebCard> */}
       <TabSection></TabSection>
       <Stories></Stories>
       <Promise></Promise>
