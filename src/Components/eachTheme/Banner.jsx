@@ -61,7 +61,7 @@ const Banner = () => {
             src="https://cdn.shopify.com/theme-store/qumk1q6o0adk0lzvfybn0xfr4rl3.jpg"
             className=" "
             alt=""
-            srcset=""
+             srcSet=""
           />
         </div>
       </div>

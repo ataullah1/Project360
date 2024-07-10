@@ -17,7 +17,7 @@ const useAxiosSecure = () => {
       },
       (error) => {
         if (error.response.status === 403) {
-          Cookies.remove("user");
+          Cookies.remove("token");
         }
         return Promise.reject(error);
       }

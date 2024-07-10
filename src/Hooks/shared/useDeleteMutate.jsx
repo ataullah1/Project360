@@ -4,7 +4,7 @@ import useAxiosSecure from "../useAxios";
 
 const useDeleteMutate = (route, onSuccess = () => {}, onError = () => {}) => {
   const Axios = useAxiosSecure();
-  const token = Cookies.get("user");
+  const token = Cookies.get("token");
   const queryClient = useQueryClient();
 
   const { mutate, isPending } = useMutation({
