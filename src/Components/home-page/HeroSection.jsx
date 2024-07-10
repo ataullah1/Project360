@@ -12,7 +12,7 @@ const HeroSection = () => {
   return (
     <div className="pt-10">
       <div>
-        <h1 className="xl:text-7xl lg:text-5xl text-[40px] font-semibold text-[#212326]">
+        <h1 className="xl:text-7xl lg:text-5xl text-[40px] font-semibold text-primaryColor">
           Shopify themes— <br />
           built for commerce
         </h1>
