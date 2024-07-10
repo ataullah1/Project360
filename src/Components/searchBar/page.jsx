@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import Link from "next/link";
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
 const Searchbar = ({ cls, setShow }) => {
@@ -13,7 +13,7 @@ const Searchbar = ({ cls, setShow }) => {
   const handleSearchbar = () => {
     setShow("hidden");
     setDatas([]);
-    setInput('');  
+    setInput('');
   };
 
   const fetchData = async (value) => {
@@ -35,8 +35,8 @@ const Searchbar = ({ cls, setShow }) => {
   };
 
   const handleClearInput = () => {
-    setInput(''); 
-    setDatas([])
+    setInput('');
+    setDatas([]);
   };
 
   return (
@@ -50,29 +50,36 @@ const Searchbar = ({ cls, setShow }) => {
             className="w-1/3 h-full outline-none"
             placeholder="Search by feature, style, or designer"
           />
-    {   input &&   <button onClick={handleClearInput} className="mr-4">
-            claer
-          </button>}
+          {input && (
+            <button onClick={handleClearInput} className="mr-4">
+              clear
+            </button>
+          )}
           <button onClick={handleSearchbar}>
-            <IoMdClose className="text-2xl"  />
+            <IoMdClose className="text-2xl hover:text-primaryColor" />
           </button>
         </div>
 
         <div className="w-full fixed top-20 left-0 right-0 z-50">
-          {!isLoading && datas.length > 0 ? (
-            <div className="flex w-1/3 flex-col items-center justify-center border-b-1 border-l-1 border-r-1 pt-4 bg-white mx-auto">
-              {datas.map((item) => (
-                <Link
-                  key={item._id}
-                  href={`/themes/${item._id}`}
-                  onClick={handleSearchbar}
-                  className="font-medium bg-white h-12 flex items-center px-8 hover:bg-slate-200 w-full"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          ) : null}
+          <div className="flex w-1/3 flex-col items-center justify-center border-b-1 border-l-1 border-r-1  bg-white mx-auto">
+            {isLoading && <div className="h-32 flex items-center justify-center">Loading...</div>}
+            {!isLoading && datas.length > 0 && (
+            
+              <>
+              <div className="pt-4"></div>
+                {datas.map((item) => (
+                  <Link
+                    key={item._id}
+                    href={`/themes/${item._id}`}
+                    onClick={handleSearchbar}
+                    className="font-medium bg-white h-12 flex items-center px-8 hover:bg-slate-200 w-full"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </>
+            )}
+          </div>
         </div>
       </div>
     </div>
