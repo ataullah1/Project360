@@ -169,11 +169,14 @@ const Navigation = ({ scrolld, handleScrollTop }) => {
               </DropdownItem>
 
               <DropdownItem key="new">
-                <h3 className="  font-semibold">Payment history</h3>
+                <Link href={"/myorder"}>
+                  {" "}
+                  <h3 className="   font-semibold">My Order</h3>{" "}
+                </Link>
               </DropdownItem>
 
               <DropdownItem key="new">
-                <h3 className="   font-semibold">My Order</h3>
+                <h3 className="  font-semibold">Payment history</h3>
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
