@@ -58,16 +58,16 @@ const HomeCardSection = () => {
 
       {/* row card 4  */}
       <div className="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 mt-20 gap-10">
-      {cards.slice(0,4).map((dta) => (
-                <ThemeCard dta={dta} key={dta._id} />
-              ))}
+        {cards.slice(0, 4).map((dta) => (
+          <ThemeCard dta={dta} key={dta._id} />
+        ))}
       </div>
 
       {/* row card 3  */}
       <div className="grid md:grid-cols-3 grid-cols-1 mt-20 gap-10">
-      {cards.slice(0,3).map((dta) => (
-                <ThemeCard dta={dta} key={dta._id} />
-              ))}
+        {cards.slice(0, 3).map((dta) => (
+          <ThemeCard dta={dta} key={dta._id} />
+        ))}
       </div>
     </div>
   );
