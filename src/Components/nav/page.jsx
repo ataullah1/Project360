@@ -24,7 +24,7 @@ import Link from "next/link";
 import { ImCross } from "react-icons/im";
 import { FaRegUserCircle } from "react-icons/fa";
 
-const Navigation = ({ scrolld, handleScrollTop }) => {
+const Navigation = () => {
   const [show, setShow] = useState("hidden");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -123,10 +123,10 @@ const Navigation = ({ scrolld, handleScrollTop }) => {
   );
 
   return (
-    <div className="w-full h-20 flex  bg-transparent fixed top-0 left-0 right-0 z-40">
-      <nav className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto h-20 flex items-center justify-between px-2 2xl:px-0  bg-transparent fixed top-0 left-0 right-0 z-40">
+    <div className="w-full h-20 flex  bg-white fixed top-0 left-0 right-0 z-40">
+      <nav className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto h-20 flex items-center justify-between px-2 2xl:px-0  bg-white fixed top-0 left-0 right-0 z-40">
         <div className="flex gap-16">
-          <Link href={"/"} onClick={handleScrollTop}>
+          <Link href={"/"}>
             <div className="flex gap-1 items-center">
               <img
                 src="https://i.ibb.co/jgzQqq1/edit.png"
@@ -156,7 +156,7 @@ const Navigation = ({ scrolld, handleScrollTop }) => {
               {/* LOGIN icon  */}
 
               <div className="">
-                <div className="text-3xl flex justify-center items-center cursor-pointer   ">
+                <div className="text-3xl flex justify-center items-center cursor-pointer hover:text-primaryColor   ">
                   <FaRegUserCircle />
                 </div>
               </div>
@@ -171,12 +171,8 @@ const Navigation = ({ scrolld, handleScrollTop }) => {
               <DropdownItem key="new">
                 <Link href={"/myorder"}>
                   {" "}
-                  <h3 className="   font-semibold">My Order</h3>{" "}
+                  <h3 className="   font-semibold">My Profile</h3>{" "}
                 </Link>
-              </DropdownItem>
-
-              <DropdownItem key="new">
-                <h3 className="  font-semibold">Payment history</h3>
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
