@@ -176,14 +176,10 @@ const Navigation = () => {
            
             
           <DropdownItem key="new">
-      <Link href={'/myorder'}>  <h3 className="   font-semibold">My Order</h3>   </Link>
+      <Link href={'/myorder'}>  <h3 className="   font-semibold">My Profile</h3>   </Link>
             </DropdownItem>
             
-          <DropdownItem key="new">
-          <h3 className="  font-semibold">Payment history</h3>
-         
-            </DropdownItem>
-            
+       
          
               
           </DropdownMenu>
