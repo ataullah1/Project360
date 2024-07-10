@@ -10,32 +10,20 @@ const HeroSection = () => {
   const { data, isLoading } = useFetchQuery("/themes");
   const cards = data?.data || [];
   return (
-    <div className="pt-10">
-      <div>
-        <h1 className="xl:text-7xl lg:text-5xl text-[40px] font-semibold text-primaryColor">
-          Shopify themes— <br />
-          built for commerce
+    <div className="min-h-screen w-full relative">
+      <div className="w-full lg:w-2/5">
+        <h1 className="text-5xl font-bold">
+          Creative multi-purpose{" "}
+          <span className="text-primaryColor">Shopify</span> theme
         </h1>
-        <div className="flex justify-between gap-5 lg:flex-row flex-col ">
-          <p className="xl:text-2xl text-xl mt-5 w-1/2">
-            Take your store from launch to scale with themes that make selling
-            easy.
-          </p>
-          <div className="w-1/2 lg:flex items-end justify-end">
-            <Link href={"/themes"}>
-              <button className="bg-black px-7 w-[180px] py-3 rounded-full text-white text-[16px] font-semibold hover:bg-black/80">
-                Explore themes
-              </button>
-            </Link>
-          </div>
-        </div>
+        <p className="text-xl opacity-70">
+          <span className="text-primaryColor">#1 Best Selling</span> Shopify
+          Theme of all time on Envato. An all-in-one template for your Shopify
+          store, allowing you to create various structures and meet specific
+          requirements.
+        </p>
       </div>
-
-      <div className="grid lg:grid-cols-2 grid-cols-1 mt-20 gap-10">
-        {cards.slice(0, 2).map((dta) => (
-          <ThemeCard dta={dta} key={dta._id} />
-        ))}
-      </div>
+      <div className="w-full lg:w-3/5"></div>
     </div>
   );
 };

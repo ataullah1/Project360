@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <div className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto px-4 mt-20">
-        <HeroSection></HeroSection>
+        <HeroSection />
         <HomeCardSection></HomeCardSection>
       </div>
 
