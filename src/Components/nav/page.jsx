@@ -156,7 +156,7 @@ const Navigation = ({ scrolld, handleScrollTop }) => {
               {/* LOGIN icon  */}
 
               <div className="">
-                <div className="text-3xl flex justify-center items-center cursor-pointer hover:text-primaryColor   ">
+                <div className="text-3xl flex justify-center items-center cursor-pointer   ">
                   <FaRegUserCircle />
                 </div>
               </div>
@@ -169,14 +169,11 @@ const Navigation = ({ scrolld, handleScrollTop }) => {
               </DropdownItem>
 
               <DropdownItem key="new">
-                <Link href={"/myorder"}>
-                  {" "}
-                  <h3 className="   font-semibold">My Order</h3>{" "}
-                </Link>
+                <h3 className="  font-semibold">Payment history</h3>
               </DropdownItem>
 
               <DropdownItem key="new">
-                <h3 className="  font-semibold">Payment history</h3>
+                <h3 className="   font-semibold">My Order</h3>
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>

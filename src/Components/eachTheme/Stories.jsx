@@ -6,7 +6,7 @@ import React from "react";
 const Stories = () => {
   return (
     <div className=" bg-white text-black my-24">
-      <div className="max-w-7xl mx-auto ">
+      <div className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto ">
         <h2 className=" text-2xl font-semibold mb-5">Stores using Parallax</h2>
         <div className="flex flex-row  justify-center items-center md:gap-4 gap-8 max-w-full overflow-x-auto overflow-y-hidden min-h-[361px]">
           <div className="min-w-[330px] lg:h-full hover:opacity-80 ">
