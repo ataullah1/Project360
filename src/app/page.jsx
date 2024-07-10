@@ -11,34 +11,32 @@ import { jwtDecode } from "jwt-decode";
 import { useEffect } from "react";
 
 export default function Home() {
-  const token = Cookies.get('token');
+  const token = Cookies.get("token");
 
   useEffect(() => {
+    if (token) {
+      try {
+        const decoded = jwtDecode(token);
+        console.log(decoded);
 
-if(token){
-  try {
-    const decoded = jwtDecode(token);
-    console.log(decoded)
-    
-      if(decoded.id){
-        console.log("User is logged in")
+        if (decoded.id) {
+          console.log("User is logged in");
+        }
+      } catch (error) {
+        console.error("Error decoding token:", error);
+
+        console.log("User is not logged in");
       }
-  } catch (error) {
-    console.error("Error decoding token:", error);
-    
-    console.log("User is not logged in")
-  }
-}else {
-  console.log("User is not logged in")
-}
-   
-  }, [])
-  
+    } else {
+      console.log("User is not logged in");
+    }
+  }, [token]);
+
   return (
     <main>
+      <HeroSection />
       <div className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto px-4 mt-20">
-        <HeroSection />
-        <HomeCardSection></HomeCardSection>
+        <HomeCardSection />
       </div>
 
       <Testimonial />
