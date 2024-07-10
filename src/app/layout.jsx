@@ -1,13 +1,8 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import Navigation from "@/Components/nav/page";
 import Footer from "@/Components/footer/page";
 import QueryProvider from "@/providers/QueryProvider";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Shopyfy Themes",
@@ -15,38 +10,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const [scrolled, setScrolled] = useState(false);
-  const router = useRouter();
-  const { pathname } = router;
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [pathname]);
-
-  useEffect(() => {
-    const handleScrolled = () => {
-      if (window.scrollY > 0) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScrolled);
-    return () => {
-      window.removeEventListener("scroll", handleScrolled);
-    };
-  }, []);
-
-  const handleScrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <html lang="en" className="bg-white">
-      <body className={inter.className}>
+      <body>
         <NextUIProvider>
           <QueryProvider>
-            <Navigation handleScrollTop={handleScrollTop} scrolled={scrolled} />
+            <Navigation />
             {children}
             <Footer />
           </QueryProvider>
