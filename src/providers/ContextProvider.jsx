@@ -7,7 +7,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ContextData = createContext();
 
 export const ContextProvider = ({ children }) => {
-  const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState(null);
   const token = Cookies.get("token");
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export const ContextProvider = ({ children }) => {
         setUserData(decoded);
       } catch (error) {
         console.error("Failed to decode token:", error);
-        setUserData({});
+        setUserData();
       }
     } else {
       console.log("Token Can't Access:");

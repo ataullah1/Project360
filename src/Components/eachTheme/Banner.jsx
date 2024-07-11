@@ -7,7 +7,7 @@ import { MdReadMore } from "react-icons/md";
 
 const Banner = ({ data }) => {
   // const {name,author}=data;
-  console.log(data, "banner data");
+  // console.log(data, "banner data");
   return (
     <div className="bg-black text-white">
       <div className="  py-16 w-11/12 md:w-10/12 max-w-[1800px] mx-auto flex flex-col lg:flex-row gap-6 ">
@@ -18,22 +18,18 @@ const Banner = ({ data }) => {
             <span className=" text-sm">
               by{" "}
               <a href="/kjfvnke" className="underline">
-              {data?.author}
+                {data?.author}
               </a>
             </span>
           </h1>
-          <h1 className=" text-[12px]">Version ${data?.version} •Jun 11, 2024</h1>
+          <h1 className=" text-[12px]">
+            Version ${data?.version} •Jun 11, 2024
+          </h1>
           <h1 className=" text-lg font-bold mt-7">${data?.price} USD</h1>
-          <p className=" text-lg my-8">
-          {data?.description
-          }
-          </p>
+          <p className=" text-lg my-8">{data?.description}</p>
           <p className=" text-sm font-bold mb-2">Includes support for:</p>
           {data?.includeSupport.map((dta, i) => (
-            <li
-              key={i}
-              className="px-2 py-1 text-sm font-medium"
-            >
+            <li key={i} className="px-2 py-1 text-sm font-medium">
               {dta}
             </li>
           ))}
@@ -68,7 +64,7 @@ const Banner = ({ data }) => {
           <div
             className="w-2/5 ml-auto xl:h-[380px] lg:h-[270px] h-[200px]  overflow-hidden   max-h-full flex flex-col-reverse rounded-xl border-primaryColor border-opacity-70 border-large hover:shadow-primaryColor hover:shadow-lg  bg-primaryColor bg-cover bg-no-repeat bg-top hover:bg-bottom duration-[2s]"
             style={{
-              backgroundImage:`url(${data?.featuredPhoneImage})`,
+              backgroundImage: `url(${data?.featuredPhoneImage})`,
             }}
           ></div>
         </div>

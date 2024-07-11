@@ -27,9 +27,13 @@ import { ImCross } from "react-icons/im";
 import { FaRegUserCircle } from "react-icons/fa";
 import useScroll from "@/Hooks/useScroll";
 import { useContextData } from "@/providers/ContextProvider";
+import { CgLogOut } from "react-icons/cg";
+import Cookies from "js-cookie";
 
 const Navigation = () => {
   const { userData } = useContextData();
+  const isUser = userData?._id || null;
+  console.log("user data: ", userData);
   const [show, setShow] = useState("hidden");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const scrolld = useScroll();
@@ -128,6 +132,11 @@ const Navigation = () => {
     </>
   );
 
+  const logout = () => {
+    Cookies.remove("token"); // Replace 'token' with the name of the cookie you want to remove
+    // Add any additional logout logic here
+    window.location.href = "/"; // Redirect to the login page or any other page
+  };
   return (
     <div
       className={`w-full h-20 flex fixed top-0 left-0 right-0 z-40 ${
@@ -162,7 +171,7 @@ const Navigation = () => {
             </button>
           </div>
 
-          {userData ? (
+          {isUser ? (
             <Dropdown>
               <DropdownTrigger>
                 {/* LOGIN icon  */}
@@ -186,8 +195,13 @@ const Navigation = () => {
                     <h3 className="   font-semibold">My Orders</h3>{" "}
                   </Link>
                 </DropdownItem>
-                <DropdownItem key="new">
-                  <button>Log Out</button>
+                <DropdownItem key="new" onClick={logout}>
+                  <button className="flex items-center gap-3 font-semibold">
+                    Log Out{" "}
+                    <span className="text-xl">
+                      <CgLogOut />
+                    </span>
+                  </button>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>

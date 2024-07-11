@@ -40,7 +40,7 @@ const Signup = () => {
       const decoded = jwtDecode(data.data.data.accessToken);
       console.log(decoded);
     } catch (error) {
-      console.error("Error decoding token:", error);
+      console.log("Error decoding token:");
       setError("An error occurred while login");
     }
 
