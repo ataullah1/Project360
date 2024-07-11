@@ -3,7 +3,10 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 
 const DemoStore = () => {
   return (
-    <div className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto my-32 md:my-48 ">
+    <div
+      id="demo"
+      className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto my-32 md:my-48 "
+    >
       <div class="items-center gap-12 my-24">
         <div className="flex justify-center items-center">
           <span class="bg-gradient-to-r from-[#F2994A] to-primaryColor font-bold inline-block text-transparent bg-clip-text md:text-8xl text-6xl lg:text-9xl">
@@ -38,22 +41,29 @@ const DemoStore = () => {
 
             <div className="p-3">
               <div className="flex items-center justify-between">
-                <h1 className="text-md font-medium  text-black opacity-50">
+                <Link href={""}>
                   {" "}
-                  Johen
-                </h1>
-                {/* {dta?.author}{dta?.author} */}
-                <h1 className="text-4xl hover:text-primaryColor text-black opacity-50 hover:opacity-100 font-semibold">
-                  <HiOutlineExternalLink />
-                  {/* ${dta?.price} <span className="text-base">USD</span> */}
-                </h1>
+                  <h1 className="text-md font-medium  text-black opacity-50">
+                    {" "}
+                    Johen
+                  </h1>
+                </Link>
+                <Link href={""}>
+                  <h1 className="text-4xl hover:text-primaryColor text-black opacity-50 hover:opacity-100 font-semibold">
+                    <HiOutlineExternalLink />
+                    {/* ${dta?.price} <span className="text-base">USD</span> */}
+                  </h1>
+                </Link>
               </div>
 
               {/* Color Change */}
 
               {/*  */}
               <div className="flex flex-wrap gap-2 my-5">
-                <h1 className="text-lg font-semibold  text-black "> ABCD</h1>
+                <Link href={""}>
+                  <h1 className="text-lg font-semibold  text-black "> ABCD</h1>
+                </Link>
+
                 {/* {dta?.author} */}
               </div>
             </div>
