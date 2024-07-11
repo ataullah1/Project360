@@ -13,8 +13,10 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay } from "swiper/modules";
 import useFetchQuery from "@/Hooks/shared/useFetch";
+import useScroll from "@/Hooks/useScroll";
 
 const HeroSection = () => {
+  const scroll = useScroll();
   const { data, isLoading } = useFetchQuery("/themes");
   const images = data?.data || [];
   // console.log("Is Loading: ", isLoading);
@@ -56,7 +58,7 @@ const HeroSection = () => {
                 disableOnInteraction: false,
               }}
               modules={[Autoplay]}
-              className="mySwiper w-full h-96 md:h-[450px] lg:h-[650px]"
+              className="mySwiper w-full h-96 md:h-[450px] lg:h-[650px] bg-slate-100 bg-opacity-50 rounded-md"
             >
               {images.map((img) => (
                 <SwiperSlide
@@ -84,7 +86,7 @@ const HeroSection = () => {
                 disableOnInteraction: false,
               }}
               modules={[Autoplay]}
-              className="mySwiper w-full h-full rounded-2xl"
+              className="mySwiper w-full h-full rounded-2xl bg-slate-100"
             >
               {images.map((img) => (
                 <SwiperSlide
@@ -142,7 +144,11 @@ const HeroSection = () => {
       </div>
 
       {/* side image color */}
-      <div className="absolute h-full w-full left-0 top-0 -z-50">
+      <div
+        className={`absolute duration-[7s] h-full w-full -z-50 ${
+          scroll ? "left-10 top-10" : "left-0 top-0"
+        }`}
+      >
         <div className="bg-white w-full h-full absolute opacity-95"></div>
         <img
           className="h-full w-full"
@@ -156,7 +162,11 @@ const HeroSection = () => {
         alt=""
       />
       <img
-        className="absolute h-full -left-[700px] -rotate-12 top-6 -z-30"
+        className={`duration-[7s] absolute h-full -z-30 ${
+          scroll
+            ? "-left-[750px] -rotate-6 top-10"
+            : "-left-[700px] -rotate-12 top-6"
+        }`}
         src="https://themes.halothemes.com/marketplace/shopify-ella-ldp/assets/images/parallax-layer-red.png"
         alt=""
       />

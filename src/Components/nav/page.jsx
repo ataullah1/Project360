@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { GrMenu } from "react-icons/gr";
 import { FaAngleDown } from "react-icons/fa6";
@@ -23,11 +25,13 @@ import {
 import Link from "next/link";
 import { ImCross } from "react-icons/im";
 import { FaRegUserCircle } from "react-icons/fa";
+import useScroll from "@/Hooks/useScroll";
 
 const Navigation = () => {
   const [show, setShow] = useState("hidden");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
+  const scrolld = useScroll();
+  // console.log(scrolld);
   const handleSearchbar = () => {
     setShow("");
   };
@@ -123,8 +127,14 @@ const Navigation = () => {
   );
 
   return (
-    <div className="w-full h-20 flex  bg-white fixed top-0 left-0 right-0 z-40">
-      <nav className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto h-20 flex items-center justify-between px-2 2xl:px-0  bg-white fixed top-0 left-0 right-0 z-40">
+    <div
+      className={`w-full h-20 flex fixed top-0 left-0 right-0 z-40 ${
+        scrolld
+          ? "bg-white bg-opacity-90 shadow-md shadow-slate-400 duration-300"
+          : "bg-transparent"
+      }`}
+    >
+      <nav className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto h-20 flex items-center justify-between px-2 2xl:px-0  bg-transparent fixed top-0 left-0 right-0 z-40">
         <div className="flex gap-16">
           <Link href={"/"}>
             <div className="flex gap-1 items-center">
