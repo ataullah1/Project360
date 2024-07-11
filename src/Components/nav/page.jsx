@@ -32,8 +32,9 @@ import Cookies from "js-cookie";
 
 const Navigation = () => {
   const { userData } = useContextData();
-  const isUser = userData?._id || null;
-  console.log("user data: ", userData);
+  // console.log(userData);
+  const isUser = userData?.id || null;
+  // console.log("user data: ", isUser);
   const [show, setShow] = useState("hidden");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const scrolld = useScroll();
