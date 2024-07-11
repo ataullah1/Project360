@@ -18,10 +18,13 @@ const Page = ({ params }) => {
   if (data) {
     console.log(data, "data");
   }
+  if (!data) {
+    return <>loading</>;
+  }
 
   return (
     <div className="mt-12">
-      <Banner data={data}></Banner>
+      <Banner data={data.data}></Banner>
       <DemoStore></DemoStore>
       {/* <WebCard></WebCard> */}
       <TabSection></TabSection>

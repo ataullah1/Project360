@@ -18,22 +18,26 @@ const Banner = ({ data }) => {
             <span className=" text-sm">
               by{" "}
               <a href="/kjfvnke" className="underline">
-                SmartBase®
+              {data?.author}
               </a>
             </span>
           </h1>
-          <h1 className=" text-[12px]">Version 1.0.1 •Jun 11, 2024</h1>
-          <h1 className=" text-lg font-bold mt-7">$290 USD</h1>
+          <h1 className=" text-[12px]">Version ${data?.version} •Jun 11, 2024</h1>
+          <h1 className=" text-lg font-bold mt-7">${data?.price} USD</h1>
           <p className=" text-lg my-8">
-            Clean and fast theme for ambitious brands
+          {data?.description
+          }
           </p>
           <p className=" text-sm font-bold mb-2">Includes support for:</p>
-          <li>Color swatches</li>
-          <li>Quick view</li>
-          <li>Stock counter</li>
-          <li>Mega menu</li>
-          <li>Sticky header</li>
-          <li>See all features here</li>
+          {data?.includeSupport.map((dta, i) => (
+            <li
+              key={i}
+              className="px-2 py-1 text-sm font-medium"
+            >
+              {dta}
+            </li>
+          ))}
+
           <div className="my-6">
             <button
               className="relative h-14 w-64 shadow-md hover:shadow-none shadow-primaryColor  origin-top transform rounded-lg border-2
@@ -45,7 +49,7 @@ const Banner = ({ data }) => {
             </button>
           </div>
           <div className="pt-8 flex gap-4 items-center flex-col">
-            <Link href="">
+            <Link href="#demo">
               {" "}
               <p className="text-lg text-center flex items-center gap-2 hover:text-primaryColor">
                 View Demo Store <MdReadMore size={"2rem"} />
@@ -58,13 +62,13 @@ const Banner = ({ data }) => {
         <div
           className="lg:w-2/3  xl:h-[580px] h-[480px] overflow-hidden  max-h-full flex flex-col-reverse rounded-xl border-large border-primaryColor border-opacity-70  hover:shadow-primaryColor hover:shadow-lg  bg-cover bg-no-repeat bg-top hover:bg-bottom duration-[4s]"
           style={{
-            backgroundImage: `url('https://cdn.shopify.com/theme-store/qumk1q6o0adk0lzvfybn0xfr4rl3.jpg')`,
+            backgroundImage: `url(${data?.featuredDesktopImage})`,
           }}
         >
           <div
             className="w-2/5 ml-auto xl:h-[380px] lg:h-[270px] h-[200px]  overflow-hidden   max-h-full flex flex-col-reverse rounded-xl border-primaryColor border-opacity-70 border-large hover:shadow-primaryColor hover:shadow-lg  bg-primaryColor bg-cover bg-no-repeat bg-top hover:bg-bottom duration-[2s]"
             style={{
-              backgroundImage: `url('https://cdn.shopify.com/theme-store/qumk1q6o0adk0lzvfybn0xfr4rl3.jpg')`,
+              backgroundImage:`url(${data?.featuredPhoneImage})`,
             }}
           ></div>
         </div>
