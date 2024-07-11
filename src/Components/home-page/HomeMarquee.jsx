@@ -24,7 +24,7 @@ const HomeMarquee = () => {
          <div className="absolute hover:bg-white/80 inset-0 w-full h-full translate-y-[100%] group-hover:translate-y-0 flex flex-col justify-center items-center">
            <h3 className="text-2xl">{dta?.name}</h3>
            <p>${dta?.price} USD</p>
-           <Link href={`/themes/${1}`}><button className="text-xl px-5 py-3 bg-black text-white rounded-full">
+           <Link href={`/themes/${dta._id}`}><button className="text-xl px-5 py-3 bg-black text-white rounded-full">
              View theme
            </button></Link>
            
@@ -45,7 +45,7 @@ const HomeMarquee = () => {
          <div className="absolute hover:bg-white/80 inset-0 w-full h-full translate-y-[100%] group-hover:translate-y-0 flex flex-col justify-center items-center">
            <h3 className="text-2xl">{dta?.name}</h3>
            <p>${dta?.price} USD</p>
-           <Link href={`/themes/${1}`}><button className="text-xl px-5 py-3 bg-black text-white rounded-full">
+           <Link href={`/themes/${dta._id}`}><button className="text-xl px-5 py-3 bg-black text-white rounded-full">
              View theme
            </button></Link>
            
