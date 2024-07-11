@@ -5,14 +5,16 @@ import Link from "next/link";
 import React from "react";
 import { MdReadMore } from "react-icons/md";
 
-const Banner = () => {
+const Banner = ({ data }) => {
+  // const {name,author}=data;
+  console.log(data, "banner data");
   return (
     <div className="bg-black text-white">
       <div className="  py-16 w-11/12 md:w-10/12 max-w-[1800px] mx-auto flex flex-col lg:flex-row gap-6 ">
         {/* description section */}
         <div className="lg:w-1/3 w-full text-center lg:text-left">
           <h1 className="text-4xl ">
-            Polyform{" "}
+            {data?.name}
             <span className=" text-sm">
               by{" "}
               <a href="/kjfvnke" className="underline">
@@ -33,12 +35,6 @@ const Banner = () => {
           <li>Sticky header</li>
           <li>See all features here</li>
           <div className="my-6">
-            {/* <Button
-              className="bg-white text-black px-36 my-6 font-bold "
-              radius="full"
-            >
-              Try Theme
-            </Button> */}
             <button
               className="relative h-14 w-64 shadow-md hover:shadow-none shadow-primaryColor  origin-top transform rounded-lg border-2
              border-primaryColor/80 text-xl text-primaryColor before:absolute before:top-0 before:block 
@@ -52,19 +48,9 @@ const Banner = () => {
             <Link href="">
               {" "}
               <p className="text-lg text-center flex items-center gap-2 hover:text-primaryColor">
-                View Demo Store <MdReadMore size={'2rem'} />
+                View Demo Store <MdReadMore size={"2rem"} />
               </p>{" "}
             </Link>
-            <p className="text-sm  text-gray-500">
-              {" "}
-              <span className="underline hover:no-underline text-white">
-                {" "}
-                <Link href="" className=" hover:text-primaryColor">
-                  Unlimited free trial
-                </Link>
-              </span>
-              . Pay if you publish.
-            </p>
           </div>
         </div>
         {/* image card section */}
