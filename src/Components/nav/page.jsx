@@ -297,6 +297,25 @@ const Navigation = () => {
                             All themes
                           </Link>
                         </li>
+                        <li className=" my-4">
+                          {" "}
+                          <Link href={"/login"}>
+                            <button className="w-full px-6 py-2 hover:bg-primaryColor bg-white text-primaryColor rounded-full font-medium hover:text-white border-2 border-primaryColor">
+                              Log in
+                            </button>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href={"/signup"}
+                           
+                          >
+                            <button  className=" w-full px-6 py-2 bg-primaryColor hover:bg-white hover:text-primaryColor rounded-full font-medium text-white border-2 border-primaryColor">
+                            Sign in
+                            </button>
+                         
+                          </Link>
+                        </li>
                       </ul>
                     </ModalBody>
                   </>

@@ -17,22 +17,18 @@ const Banner = ({ data }) => {
             <span className=" text-sm">
               by{" "}
               <a href="/kjfvnke" className="underline">
-              {data?.author}
+                {data?.author}
               </a>
             </span>
           </h1>
-          <h1 className=" text-[12px]">Version ${data?.version} •Jun 11, 2024</h1>
+          <h1 className=" text-[12px]">
+            Version ${data?.version} •Jun 11, 2024
+          </h1>
           <h1 className=" text-lg font-bold mt-7">${data?.price} USD</h1>
-          <p className=" text-lg my-8">
-          {data?.description
-          }
-          </p>
+          <p className=" text-lg my-8">{data?.description}</p>
           <p className=" text-sm font-bold mb-2">Includes support for:</p>
           {data?.includeSupport.map((dta, i) => (
-            <li
-              key={i}
-              className="px-2 py-1 text-sm font-medium"
-            >
+            <li key={i} className="px-2 py-1 text-sm font-medium">
               {dta}
             </li>
           ))}
@@ -57,17 +53,17 @@ const Banner = ({ data }) => {
           </div>
         </div>
         {/* image card section */}
-
-        <div
-          className="lg:w-2/3  xl:h-[580px] h-[480px] overflow-hidden  max-h-full flex flex-col-reverse rounded-xl border-large border-primaryColor border-opacity-70  hover:shadow-primaryColor hover:shadow-lg  bg-cover bg-no-repeat bg-top hover:bg-bottom duration-[4s]"
-          style={{
-            backgroundImage: `url(${data?.featuredDesktopImage})`,
-          }}
-        >
+        <div className="lg:w-2/3 ">
           <div
-            className="w-2/5 ml-auto xl:h-[380px] lg:h-[270px] h-[200px]  overflow-hidden   max-h-full flex flex-col-reverse rounded-xl border-primaryColor border-opacity-70 border-large hover:shadow-primaryColor hover:shadow-lg  bg-primaryColor bg-cover bg-no-repeat bg-top hover:bg-bottom duration-[2s]"
+            className=" xl:h-[580px] h-[480px] relative overflow-hidden  max-h-full flex flex-col-reverse rounded-xl border-large border-primaryColor border-opacity-70  hover:shadow-primaryColor hover:shadow-lg  bg-cover bg-no-repeat bg-top hover:bg-bottom duration-[4s]"
             style={{
-              backgroundImage:`url(${data?.featuredPhoneImage})`,
+              backgroundImage: `url(${data?.featuredDesktopImage})`,
+            }}
+          ></div>
+          <div
+            className="w-1/2 md:w-1/5 left-auto lg:right-20 right-5 -bottom-[400px] lg:bottom-32 absolute xl:h-[500px] lg:h-[300px] h-[300px]  overflow-hidden   max-h-full flex flex-col-reverse rounded-xl border-primaryColor border-opacity-70 border-large hover:shadow-primaryColor hover:shadow-lg  bg-primaryColor bg-cover bg-no-repeat bg-top hover:bg-bottom duration-[2s]"
+            style={{
+              backgroundImage: `url(${data?.featuredPhoneImage})`,
             }}
           ></div>
         </div>

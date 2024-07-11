@@ -39,14 +39,11 @@ const DemoStore = () => {
               ></div>
             </Link>
 
-            <div className="p-3">
+            <div className="p-3 py-8">
               <div className="flex items-center justify-between">
                 <Link href={""}>
                   {" "}
-                  <h1 className="text-md font-medium  text-black opacity-50">
-                    {" "}
-                    Johen
-                  </h1>
+                  <h1 className="text-lg font-semibold hover:opacity-50 text-black "> ABCD</h1>
                 </Link>
                 <Link href={""}>
                   <h1 className="text-4xl hover:text-primaryColor text-black opacity-50 hover:opacity-100 font-semibold">
@@ -54,17 +51,6 @@ const DemoStore = () => {
                     {/* ${dta?.price} <span className="text-base">USD</span> */}
                   </h1>
                 </Link>
-              </div>
-
-              {/* Color Change */}
-
-              {/*  */}
-              <div className="flex flex-wrap gap-2 my-5">
-                <Link href={""}>
-                  <h1 className="text-lg font-semibold  text-black "> ABCD</h1>
-                </Link>
-
-                {/* {dta?.author} */}
               </div>
             </div>
           </div>
