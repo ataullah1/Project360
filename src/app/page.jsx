@@ -6,6 +6,7 @@ import HomeMarquee from "@/Components/home-page/HomeMarquee";
 // import Testimonial from "@/Components/home-page/Testimonial";
 
 import Testimonial from "@/Components/home-page/Testimonial";
+import { useContextData } from "@/providers/ContextProvider";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 import { useEffect } from "react";
@@ -31,7 +32,8 @@ export default function Home() {
       console.log("User is not logged in");
     }
   }, [token]);
-
+  const { data } = useContextData();
+  console.log(data);
   return (
     <main>
       <HeroSection />
