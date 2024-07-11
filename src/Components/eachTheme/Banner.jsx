@@ -1,6 +1,5 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import React from "react";
 import { MdReadMore } from "react-icons/md";
@@ -9,7 +8,7 @@ const Banner = ({ data }) => {
   // const {name,author}=data;
   // console.log(data, "banner data");
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white mt-20">
       <div className="  py-16 w-11/12 md:w-10/12 max-w-[1800px] mx-auto flex flex-col lg:flex-row gap-6 ">
         {/* description section */}
         <div className="lg:w-1/3 w-full text-center lg:text-left">
