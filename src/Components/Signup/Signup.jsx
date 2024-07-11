@@ -1,12 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Divider } from "@nextui-org/react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import usePostMutate from "@/Hooks/shared/usePostMutate";
 import { useForm } from "react-hook-form";
 import { Spinner } from "@nextui-org/react";
+import Link from "next/link";
+import Cookies from "js-cookie";
 
 const Signup = () => {
   const {
@@ -14,16 +16,50 @@ const Signup = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm();
-  const { mutate, isPending } = usePostMutate("/users");
+  // const { mutate, isPending } = usePostMutate("/users");
+
+  // const onSubmit = async (data) => {
+  //   try {
+  //     const response = await mutate(data);
+  //     console.log("Response:", response);
+  //     // Optionally handle success
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //     // Handle error
+  //   }
+  // };
+  const [error, setError] = useState(null);
+
+  const onError = (err) => {
+    console.log(err);
+    setError(err);
+  };
+  const onSuccess = (data) => {
+    console.log(data.data.data.accessToken);
+    try {
+      const decoded = jwtDecode(data.data.data.accessToken);
+      console.log(decoded);
+    } catch (error) {
+      console.log("Error decoding token:");
+      setError("An error occurred while login");
+    }
+
+    Cookies.set("token", data.data.data.accessToken);
+  };
+
+  const { mutate, isPending } = usePostMutate("/users", onSuccess, onError);
+
+  const [loginError, setLoginError] = useState("");
 
   const onSubmit = async (data) => {
     try {
-      const response = await mutate(data);
-      console.log("Response:", response);
-      // Optionally handle success
-    } catch (error) { 
-      console.error("Error:", error);
-      // Handle error
+      mutate(data);
+
+      setError(null);
+    } catch (error) {
+      // console.error("Error:", error);
+      // Check if the error object has a response property and handle it accordingly
+      // setLoginError(error.response?.data?.message || error.message || "An error occurred");
     }
   };
 
@@ -115,10 +151,13 @@ const Signup = () => {
 
         <div>
           <p className="text-sm text-[#616161] font-medium mt-12 flex items-center transition duration-1000">
-            New to Shopify?
-            <span className="text-blue-500 hover:text-blue-400 hover:mr-3 mr-1 transition duration-1000 ml-2">
-              Get Started
-            </span>
+            Already have an account?
+            <Link
+              href={"/login"}
+              className="text-blue-500 hover:text-blue-400 hover:mr-3 mr-1 transition duration-1000 ml-2"
+            >
+              Log In
+            </Link>
             <FaArrowRightLong className="text-blue-500 transition duration-1000" />
           </p>
           <div className="flex gap-2">

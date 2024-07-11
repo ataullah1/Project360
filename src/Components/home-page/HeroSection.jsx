@@ -157,7 +157,7 @@ const HeroSection = () => {
         />
       </div>
       <img
-        className="absolute h-full w-full top-0 left-0 opacity-95 -z-40"
+        className="absolute h-full w-full top-0 left-0 opacity-75 -z-40"
         src="https://themes.halothemes.com/marketplace/shopify-ella-ldp/assets/images/parallax-rectangle.png"
         alt=""
       />
