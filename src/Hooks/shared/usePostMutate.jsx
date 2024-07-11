@@ -7,7 +7,7 @@ const usePostMutate = (route, onSuccess = () => {}, onError = () => {}) => {
   const Axios = useAxiosSecure();
   const token = Cookies.get("token");
   const queryClient = useQueryClient();
-const [error,setError]=useState(null)
+  const [error, setError] = useState(null);
   const { mutate, isPending } = useMutation({
     mutationFn: (obj) =>
       Axios.post(route, obj, {
@@ -24,12 +24,11 @@ const [error,setError]=useState(null)
     onError: (err) => {
       console.log(err);
       onError(err);
-      setError(err)
-
+      setError(err);
     },
   });
 
-return { mutate, error,setError, isPending };
+  return { mutate, error, setError, isPending };
 };
 
 export default usePostMutate;

@@ -32,8 +32,9 @@ export default function Home() {
       console.log("User is not logged in");
     }
   }, [token]);
-  const { data } = useContextData();
-  console.log(data);
+
+  const { userData } = useContextData();
+  console.log(userData);
   return (
     <main>
       <HeroSection />
