@@ -68,7 +68,7 @@ body {
   fill: #333;
 }
 
-.animate-spin {
+.animate-spin-bb {
   animation: spin 20s linear infinite;
 }
 

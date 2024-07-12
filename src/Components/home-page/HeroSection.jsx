@@ -14,12 +14,22 @@ import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 import useFetchQuery from "@/Hooks/shared/useFetch";
 import useScroll from "@/Hooks/useScroll";
+import { PiSpinnerBold } from "react-icons/pi";
 
 const HeroSection = () => {
   const scroll = useScroll();
   const { data, isLoading } = useFetchQuery("/themes");
   const images = data?.data || [];
   // console.log("Is Loading: ", isLoading);
+  // if (isLoading) {
+  //   return (
+  //     <div className="h-screen w-full justify-center items-center">
+  //       <span className="text-7xl animate-spin justify-center items-center">
+  //         <PiSpinnerBold />
+  //       </span>
+  //     </div>
+  //   );
+  // }
   return (
     <div className="overflow-hidden min-h-screen py-20 pb-64 relative flex flex-col lg:flex-row items-center justify-center w-11/12 mx-auto lg:w-auto lg:pl-40 gap-10 pt-36">
       <div className="w-full lg:w-2/5">
@@ -108,7 +118,7 @@ const HeroSection = () => {
         </div>
 
         {/* Circle Text */}
-        <div className="absolute top-5 left-5 z-40 w-40 h-40 animate-spin">
+        <div className="absolute top-5 left-5 z-40 w-40 h-40 animate-spin animate-spin-bb">
           <div className="relative w-full h-full">
             <div className="absolute scale-150 inset-0 w-full h-full">
               <svg className="w-full h-full circle-svg" viewBox="0 0 500 500">
@@ -172,7 +182,7 @@ const HeroSection = () => {
       />
 
       <img
-        className="animate-spin absolute h-96 overflow-hidden -right-20 rotate-180 duration-1000 -bottom-14 -z-30"
+        className="animate-spin animate-spin-bb absolute h-96 overflow-hidden -right-20 rotate-180 duration-1000 -bottom-14 -z-30"
         src="https://themes.halothemes.com/marketplace/shopify-ella-ldp/assets/images/parallax-triangle.png"
         alt=""
       />
