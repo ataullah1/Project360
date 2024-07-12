@@ -1,6 +1,11 @@
+<<<<<<< HEAD
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
+=======
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+>>>>>>> init
 import { Link } from "@nextui-org/react";
 import React from "react";
 

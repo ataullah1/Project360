@@ -12,6 +12,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // console.log(process.env.THEME_API);
+
   return (
     <html lang="en" className="bg-white">
       <body>

@@ -16,12 +16,13 @@ body {
 
 /* Login signup background gredient */
 .css-selector {
-  background: linear-gradient(235deg, #50448e, #256b69);
-  background-size: 400% 400%;
+  background: linear-gradient(141deg, #4c4383, #2d2f3e, #336765);
+  background-size: 600% 600%;
 
-  -webkit-animation: AnimationName 25s ease infinite;
-  -moz-animation: AnimationName 25s ease infinite;
-  animation: AnimationName 25s ease infinite;
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  -o-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
