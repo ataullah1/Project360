@@ -1,8 +1,10 @@
+// RootLayout.js
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import Navigation from "@/Components/nav/page";
 import Footer from "@/Components/footer/page";
 import QueryProvider from "@/providers/QueryProvider";
+import { ContextProvider } from "@/providers/ContextProvider";
 
 export const metadata = {
   title: "Shopyfy Themes",
@@ -16,11 +18,13 @@ export default function RootLayout({ children }) {
     <html lang="en" className="bg-white">
       <body>
         <NextUIProvider>
-          <QueryProvider>
-            <Navigation />
-            {children}
-            <Footer />
-          </QueryProvider>
+          <ContextProvider>
+            <QueryProvider>
+              <Navigation />
+              {children}
+              <Footer />
+            </QueryProvider>
+          </ContextProvider>
         </NextUIProvider>
       </body>
     </html>

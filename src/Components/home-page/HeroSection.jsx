@@ -13,11 +13,23 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay } from "swiper/modules";
 import useFetchQuery from "@/Hooks/shared/useFetch";
+import useScroll from "@/Hooks/useScroll";
+import { PiSpinnerBold } from "react-icons/pi";
 
 const HeroSection = () => {
+  const scroll = useScroll();
   const { data, isLoading } = useFetchQuery("/themes");
   const images = data?.data || [];
   // console.log("Is Loading: ", isLoading);
+  // if (isLoading) {
+  //   return (
+  //     <div className="h-screen w-full justify-center items-center">
+  //       <span className="text-7xl animate-spin justify-center items-center">
+  //         <PiSpinnerBold />
+  //       </span>
+  //     </div>
+  //   );
+  // }
   return (
     <div className="overflow-hidden min-h-screen py-20 pb-64 relative flex flex-col lg:flex-row items-center justify-center w-11/12 mx-auto lg:w-auto lg:pl-40 gap-10 pt-36">
       <div className="w-full lg:w-2/5">
@@ -56,7 +68,7 @@ const HeroSection = () => {
                 disableOnInteraction: false,
               }}
               modules={[Autoplay]}
-              className="mySwiper w-full h-96 md:h-[450px] lg:h-[650px]"
+              className="mySwiper w-full h-96 md:h-[450px] lg:h-[650px] bg-slate-100 bg-opacity-50 rounded-md"
             >
               {images.map((img) => (
                 <SwiperSlide
@@ -84,7 +96,7 @@ const HeroSection = () => {
                 disableOnInteraction: false,
               }}
               modules={[Autoplay]}
-              className="mySwiper w-full h-full rounded-2xl"
+              className="mySwiper w-full h-full rounded-2xl bg-slate-100"
             >
               {images.map((img) => (
                 <SwiperSlide
@@ -106,7 +118,7 @@ const HeroSection = () => {
         </div>
 
         {/* Circle Text */}
-        <div className="absolute top-5 left-5 z-40 w-40 h-40 animate-spin">
+        <div className="absolute top-5 left-5 z-40 w-40 h-40 animate-spin animate-spin-bb">
           <div className="relative w-full h-full">
             <div className="absolute scale-150 inset-0 w-full h-full">
               <svg className="w-full h-full circle-svg" viewBox="0 0 500 500">
@@ -142,7 +154,11 @@ const HeroSection = () => {
       </div>
 
       {/* side image color */}
-      <div className="absolute h-full w-full left-0 top-0 -z-50">
+      <div
+        className={`absolute duration-[7s] h-full w-full -z-50 ${
+          scroll ? "left-10 top-10" : "left-0 top-0"
+        }`}
+      >
         <div className="bg-white w-full h-full absolute opacity-95"></div>
         <img
           className="h-full w-full"
@@ -151,18 +167,22 @@ const HeroSection = () => {
         />
       </div>
       <img
-        className="absolute h-full w-full top-0 left-0 opacity-95 -z-40"
+        className="absolute h-full w-full top-0 left-0 opacity-75 -z-40"
         src="https://themes.halothemes.com/marketplace/shopify-ella-ldp/assets/images/parallax-rectangle.png"
         alt=""
       />
       <img
-        className="absolute h-full -left-[700px] -rotate-12 top-6 -z-30"
+        className={`duration-[7s] absolute h-full -z-30 ${
+          scroll
+            ? "-left-[750px] -rotate-6 top-10"
+            : "-left-[700px] -rotate-12 top-6"
+        }`}
         src="https://themes.halothemes.com/marketplace/shopify-ella-ldp/assets/images/parallax-layer-red.png"
         alt=""
       />
 
       <img
-        className="animate-spin absolute h-96 overflow-hidden -right-20 rotate-180 duration-1000 -bottom-14 -z-30"
+        className="animate-spin animate-spin-bb absolute h-96 overflow-hidden -right-20 rotate-180 duration-1000 -bottom-14 -z-30"
         src="https://themes.halothemes.com/marketplace/shopify-ella-ldp/assets/images/parallax-triangle.png"
         alt=""
       />

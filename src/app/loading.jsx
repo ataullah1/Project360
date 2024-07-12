@@ -1,9 +1,11 @@
 import React from "react";
-
+import { PiSpinnerBold } from "react-icons/pi";
 const loading = () => {
   return (
-    <div>
-      <h1 className="text-3xl"> Lodiading...</h1>
+    <div className="h-screen w-full justify-center items-center">
+      {/* <span className="text-5xl md:text-7xl animate-spin">
+        <PiSpinnerBold />
+      </span> */}
     </div>
   );
 };

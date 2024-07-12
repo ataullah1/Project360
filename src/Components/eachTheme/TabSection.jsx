@@ -1,12 +1,36 @@
 "use client";
-import { Tabs, Tab, Button } from "@nextui-org/react";
-import React from "react";
+import {
+  Tabs,
+  Tab,
+  Button,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  Checkbox,
+  ModalFooter,
+  useDisclosure,
+} from "@nextui-org/react";
+import React, { useState } from "react";
 import { FaHeadphones } from "react-icons/fa";
 import { GrDocumentVerified } from "react-icons/gr";
 import { IoLocationSharp } from "react-icons/io5";
+import { useForm } from "react-hook-form";
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
+import { FaStar } from "react-icons/fa6";
 
 const TabSection = () => {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [rating, setRating] = useState(0);
+  // const [backdrop, setBackdrop] =useState('opaque')
+  const { register, handleSubmit } = useForm();
 
+  const onSubmit = (data) => {
+    const result = [data, rating];
+    console.log(result);
+    // You can handle form submission here
+  };
   return (
     <div className="w-11/12 md:w-10/12 max-w-[1800px] mx-auto my-24">
       <div className="flex w-full flex-col">
@@ -22,7 +46,12 @@ const TabSection = () => {
             tabContent: "group-data-[selected=true]:text-primaryColor",
           }}
         >
-          <Tab key="feature" title="FEATURES"   className=" text-primaryColor bg-white border-0">
+          {/* feature tab section */}
+          <Tab
+            key="feature"
+            title="FEATURES"
+            className=" text-primaryColor bg-white border-0"
+          >
             <div>
               <div className="relative overflow-x-auto ">
                 <table className="w-full text-sm text-left rtl:text-right text-black ">
@@ -140,20 +169,137 @@ const TabSection = () => {
               </div>
             </div>
           </Tab>
+          {/* Review section */}
           <Tab key="review" title="REVIEWS">
             <div>
-              <div className="flex ">
-                <div className="w-1/4">
-                  <h2 className=" text-2xl font-bold">243 reviews</h2>
-                  <p>96% positive</p>
-                  <Button className=" bg-white border" radius="full">
-                    Write a review
-                  </Button>
+              <div className="flex md:flex-row flex-col ">
+                <div className="md:w-2/5">
+                  <h2 className=" text-xl md:text-start text-center font-bold mt-7 mb-5">
+                    243 reviews
+                  </h2>
+                  <p className=" text-3xl font-bold mb-7 md:text-start text-center">
+                    <span className="text-primaryColor md:text-start text-center ">
+                      96%{" "}
+                    </span>{" "}
+                    positive
+                  </p>
+                  <div className=" flex items center justify-center md:justify-start">
+                    <Button
+                      onPress={onOpen}
+                      className=" bg-white border text-md font-semibold  hover:bg-primaryColor text-primaryColor rounded-full  hover:text-white border-primaryColor"
+                      radius="full"
+                    >
+                      Write a review
+                    </Button>
+                  </div>
+                  {/* post review card */}
+                  <Modal
+                    isOpen={isOpen}
+                    onOpenChange={onOpenChange}
+                    placement="top-center"
+                    backdrop="blur"
+                  >
+                    <ModalContent>
+                      {(onClose) => (
+                        <>
+                          <ModalHeader className="flex flex-col gap-1">
+                            <h2 className=" text-xl text-center">
+                              Give us{" "}
+                              <span className=" text-primaryColor">Review</span>{" "}
+                            </h2>
+                          </ModalHeader>
+                          <ModalBody className="">
+                            <form
+                              className=" mx-auto my-0 p-5 bg-[#f9f9f9] border rounded-lg border-[#ddd] "
+                              onSubmit={handleSubmit(onSubmit)}
+                            >
+                              <label className=" block font-bold mb-4">
+                                {" "}
+                                Name:
+                              </label>
+                              <input
+                                className=" w-full p-2 mb-3 border rounded-lg border-primaryColor"
+                                type="text"
+                                {...register("userName", { required: true })}
+                                placeholder="Enter your name"
+                              />
+                              <label className=" block my-4 font-bold ">
+                                Rate this website:
+                              </label>
+                              <div className=" flex justify-center">
+                                <Rating
+                                  style={{ maxWidth: 180 }}
+                                  value={rating}
+                                  onChange={setRating}
+                                />
+                              </div>
+
+                              <label className=" block my-4 font-bold ">
+                                Comment:
+                              </label>
+                              <textarea
+                                className=" w-full p-2 mb-3 border rounded-lg border-primaryColor"
+                                {...register("comment", { required: true })}
+                                placeholder="Enter your comment"
+                                rows={4}
+                              />
+
+                              {/* <Button
+                                color="primary"
+                                type="submit"
+                                onPress={onClose}
+                              >
+                                Submit Review
+                              </Button> */}
+                              <button
+                                className="relative h-10 w-36 shadow-md hover:shadow-none shadow-primaryColor  origin-top transform rounded-lg border-2
+             border-primaryColor/80 text-md text-primaryColor before:absolute before:top-0 before:block 
+             before:h-0 before:w-full before:duration-500 hover:text-white hover:before:absolute 
+             hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:bg-primaryColor/80"
+                              >
+                                Submit Review
+                              </button>
+                            </form>
+                          </ModalBody>
+                          <ModalFooter></ModalFooter>
+                        </>
+                      )}
+                    </ModalContent>
+                  </Modal>
                 </div>
-                <div className="w-3/4"></div>
+                {/* Costomer review section */}
+                <div className="md:w-3/5 flex flex-col">
+                  {[1, 2, 3, 4].map((data) => (
+                    <div key={1} class=" border-b-1 p-8">
+                      <div className=" flex justify-between">
+                        <p class="font-bold text-xl uppercase">
+                          John Doe{" "}
+                          <span className=" text-sm font-medium text-gray-500">
+                            {" "}
+                            13 Days ago
+                          </span>
+                        </p>
+                        <div class="flex items-center justify-center space-x-2 mt-4">
+                          {[1, 2, 3, 4, 5].map((data) => (
+                            <div key={1} className=" text-xl text-yellow-500">
+                              <FaStar />
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <p class="text-base mt-5  text-gray-700">
+                        This podcast is amazing! The storytelling and production
+                        quality are top-notch. I can't wait for the next
+                        episode!
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </Tab>
+          {/* Support tab secion */}
           <Tab key="support" title="SUPPORT AND DOCUMENTATION">
             <div className=" flex md:gap-28 flex-col md:flex-row">
               <div>

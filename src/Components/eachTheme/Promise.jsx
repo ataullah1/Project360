@@ -8,20 +8,20 @@ import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { MdOutlineSystemUpdateAlt } from "react-icons/md";
 const Promise = () => {
   return (
-    <div className="bg-[#fafaf9] text-black">
-      <div className=" max-w-7xl mx-auto flex flex-col md:flex-row py-10 gap-8">
+    <div className="bg-[#faede6] text-black">
+      <div className=" w-11/12 md:w-10/12 max-w-[1800px] mx-auto flex flex-col md:flex-row py-10 gap-8">
         <div className=" lg:w-1/2 w-full text-center lg:text-left">
-          <h1 className=" text-4xl font-semibold">
-            Build with confidence — <br />
-            the Theme Store promise
+          <h1 className=" md:text-5xl text-2xl font-bold leading-relaxed">
+            Build with <span className="text-primaryColor">confidence —</span> <br />
+            <span className="text-primaryColor">the Theme</span> Store promise
           </h1>
         </div>
 
         <div className=" lg:w-1/2 w-full grid lg:grid-cols-2 grid-cols-1 gap-8 ">
           <div>
-            <div className=" flex items-center gap-2">
-              <VscWorkspaceTrusted size={"2rem"} />
-              <h1 className=" font-semibold">
+            <div className=" flex items-center text-primaryColor gap-2">
+              <VscWorkspaceTrusted  size={"2rem"} />
+              <h1 className=" text-black font-semibold">
                 Works with the latest Shopify features
               </h1>
             </div>
@@ -33,9 +33,9 @@ const Promise = () => {
             </div>
           </div>
           <div>
-            <div className=" flex items-center gap-2">
+            <div className=" flex items-center text-primaryColor gap-2">
               <TbBrandSpeedtest size={"2rem"} />
-              <h1 className=" font-semibold">Speed-tested and approved</h1>
+              <h1 className=" text-black font-semibold">Speed-tested and approved</h1>
             </div>
             <div className="pl-8 text-[#56524E]">
               <p>
@@ -46,9 +46,9 @@ const Promise = () => {
             </div>
           </div>
           <div>
-            <div className=" flex items-center gap-2">
+            <div className=" flex items-center text-primaryColor gap-2">
               <AiOutlineFieldTime size={"2rem"} />
-              <h1 className=" font-semibold">Unlimited free trial</h1>
+              <h1 className=" font-semibold text-black">Unlimited free trial</h1>
             </div>
             <div className="pl-8 text-[#56524E]">
               <p>
@@ -59,9 +59,9 @@ const Promise = () => {
             </div>
           </div>
           <div>
-            <div className=" flex items-center gap-2">
+            <div className=" flex items-center text-primaryColor gap-2">
               <FaPhotoFilm size={"2rem"} />
-              <h1 className=" font-semibold">Free high-resolution photos</h1>
+              <h1 className=" font-semibold text-black">Free high-resolution photos</h1>
             </div>
             <div className="pl-8 text-[#56524E]">
               <p>
@@ -75,9 +75,9 @@ const Promise = () => {
             </div>
           </div>
           <div>
-            <div className=" flex items-center gap-2">
+            <div className=" flex items-center text-primaryColor gap-2">
               <MdOutlineSystemUpdateAlt size={"2rem"} />
-              <h1 className=" font-semibold">Free theme updates</h1>
+              <h1 className=" font-semibold text-black">Free theme updates</h1>
             </div>
             <div className="pl-8 text-[#56524E]">
               <p>
@@ -87,9 +87,9 @@ const Promise = () => {
             </div>
           </div>
           <div>
-            <div className=" flex items-center gap-2">
+            <div className=" flex items-center text-primaryColor gap-2">
               <TbLicense size={"2rem"} />
-              <h1 className=" font-semibold">
+              <h1 className=" font-semibold text-black">
                 Non-expiring license for one store
               </h1>
             </div>

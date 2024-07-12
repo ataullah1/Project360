@@ -13,8 +13,12 @@ const CardSection = () => {
   return (
 <div className="  py-6 sm:py-8 lg:py-12">
     <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-     
+    <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+            <div class="flex items-center gap-12">
+                <h2 class="text-3xl font-bold text-gray-800 md:text-7xl ">Gall<span className="text-primaryColor">ery</span></h2>
+            </div>
 
+        </div>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
             {/* <!-- image - start --> */}
             <div

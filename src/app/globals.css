@@ -5,6 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
 *,
 body {
   /* font-family: "Inter", sans-serif; */
@@ -66,7 +69,7 @@ body {
   fill: #333;
 }
 
-.animate-spin {
+.animate-spin-bb {
   animation: spin 20s linear infinite;
 }
 
