@@ -70,7 +70,7 @@ body {
 }
 
 .animate-spin-bb {
-  animation: spin 20s linear infinite;
+  animation: spin 10s linear infinite;
 }
 
 @keyframes spin {

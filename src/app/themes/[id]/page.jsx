@@ -7,6 +7,7 @@ import Sandbox from "@/Components/eachTheme/Sandbox";
 import Stories from "@/Components/eachTheme/Stories";
 import TabSection from "@/Components/eachTheme/TabSection";
 import useFetchQuery from "@/Hooks/shared/useFetch";
+import { Spinner } from "@nextui-org/react";
 
 import React from "react";
 
@@ -19,7 +20,12 @@ const Page = ({ params }) => {
     console.log(data, "data");
   }
   if (!data) {
-    return <>loading</>;
+    return (
+      <div className="min-h-screen flex justify-center items-center">
+        {" "}
+        <Spinner />
+      </div>
+    );
   }
 
   return (

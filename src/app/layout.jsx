@@ -1,4 +1,3 @@
-// RootLayout.js
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import Navigation from "@/Components/nav/page";

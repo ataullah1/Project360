@@ -19,7 +19,6 @@ import {
   ModalContent,
   ModalHeader,
   ModalBody,
-  ModalFooter,
   useDisclosure,
 } from "@nextui-org/react";
 import Link from "next/link";
@@ -31,7 +30,7 @@ import { CgLogOut } from "react-icons/cg";
 import Cookies from "js-cookie";
 
 const Navigation = () => {
-  const { userData } = useContextData();
+  const { userData, setUserData } = useContextData();
   // console.log(userData);
   const isUser = userData?.id || null;
   // console.log("user data: ", isUser);
@@ -135,6 +134,7 @@ const Navigation = () => {
 
   const logout = () => {
     Cookies.remove("token"); // Replace 'token' with the name of the cookie you want to remove
+    setUserData(null);
     // Add any additional logout logic here
     window.location.href = "/"; // Redirect to the login page or any other page
   };
@@ -186,7 +186,7 @@ const Navigation = () => {
               <DropdownMenu aria-label="Static Actions" className="px-2">
                 <DropdownItem key="new" className="mb-1">
                   <button className="cursor-not-allowed text-center font-semibold">
-                    MD Zobayer hossen
+                    {userData?.name || "User Name"}
                   </button>
                 </DropdownItem>
 

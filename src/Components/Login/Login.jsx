@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Divider, Spinner } from "@nextui-org/react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import usePostMutate from "@/Hooks/shared/usePostMutate";
@@ -8,8 +8,20 @@ import { useForm } from "react-hook-form";
 import Cookies from "js-cookie";
 import { jwtDecode } from "jwt-decode";
 import Link from "next/link";
+import { useContextData } from "@/providers/ContextProvider";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
+  const router = useRouter();
+
+  const { userData, setUserData } = useContextData();
+  useEffect(() => {
+    // console.log(userData);
+    const isUser = userData?.id;
+    if (isUser) {
+      router.push("/");
+    }
+  }, [userData, router]);
   const {
     register,
     handleSubmit,
@@ -26,6 +38,10 @@ const Login = () => {
     try {
       const decoded = jwtDecode(data.data.data.accessToken);
       console.log(decoded);
+      setUserData(decoded);
+      Cookies.set("token", data.data.data.accessToken);
+      // return (window.location.href = "/");
+      router.push("/");
     } catch (error) {
       console.error("Error decoding token:", error);
       setError("An error occurred while login");
@@ -98,7 +114,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full h-11 bg-[#2a2a2a] font-semibold text-white rounded-lg"
+              className="w-full h-11 bg-primaryColor hover:bg-opacity-85 duration-150 font-semibold text-white rounded-lg"
               disabled={isSubmitting || isPending}
             >
               {isSubmitting || isPending ? <Spinner size="md" /> : "Log in"}

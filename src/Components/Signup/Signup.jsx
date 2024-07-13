@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Divider } from "@nextui-org/react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import usePostMutate from "@/Hooks/shared/usePostMutate";
@@ -9,8 +9,21 @@ import { useForm } from "react-hook-form";
 import { Spinner } from "@nextui-org/react";
 import Link from "next/link";
 import Cookies from "js-cookie";
+import { useContextData } from "@/providers/ContextProvider";
+import { useRouter } from "next/navigation";
 
 const Signup = () => {
+  const { userData, setUserData } = useContextData();
+  const [succ, setSucc] = useState(false);
+  const [exist, setExist] = useState(false);
+  const router = useRouter();
+  useEffect(() => {
+    // console.log(userData);
+    const isUser = userData?.id;
+    if (isUser) {
+      router.push("/");
+    }
+  }, [userData, router]);
   const {
     register,
     handleSubmit,
@@ -33,13 +46,21 @@ const Signup = () => {
   const onError = (err) => {
     console.log(err);
     setError(err);
+    setExist(true);
   };
   const onSuccess = (data) => {
     console.log(data.data.data.accessToken);
+
     try {
+      setSucc(true);
+      setError(null);
       const decoded = jwtDecode(data.data.data.accessToken);
       console.log(decoded);
+      setUserData(decoded);
+      return (window.location.href = "/");
     } catch (error) {
+      setExist(true);
+      setSucc(false);
       console.log("Error decoding token:");
       setError("An error occurred while login");
     }
@@ -48,8 +69,6 @@ const Signup = () => {
   };
 
   const { mutate, isPending } = usePostMutate("/users", onSuccess, onError);
-
-  const [loginError, setLoginError] = useState("");
 
   const onSubmit = async (data) => {
     try {
@@ -100,6 +119,9 @@ const Signup = () => {
                 errors.email ? "border-red-500" : ""
               }`}
             />
+            {exist && (
+              <span className="text-red-500">Email is already exist</span>
+            )}
             {errors.email && (
               <span className="text-red-500">Email is required</span>
             )}
@@ -117,20 +139,13 @@ const Signup = () => {
               <span className="text-red-500">Password is required</span>
             )}
 
-<<<<<<< HEAD
-            <Button type="submit" color="primary" isLoading={isPending}>
-              Button
-            </Button>
-            {/* <button className='w-full  h-11 mt-3 hover:bg-[#ebebeb]  font-medium  rounded-lg flex justify-center items-center gap-3 '><LiaUserLockSolid className='text-2xl ' /> <span className='text-sm'>sign in with passkye</span></button> */}
-=======
             <button
               type="submit"
-              className="w-full h-11 bg-[#2a2a2a] font-semibold text-white rounded-lg"
+              className="w-full h-11 bg-primaryColor hover:bg-opacity-85 duration-150 font-semibold text-white rounded-lg"
               disabled={isSubmitting || isPending}
             >
               {isSubmitting || isPending ? <Spinner size="md" /> : "Sign Up"}
             </button>
->>>>>>> init
           </div>
         </form>
 

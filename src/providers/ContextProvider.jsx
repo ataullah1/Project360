@@ -30,7 +30,9 @@ export const ContextProvider = ({ children }) => {
     }
   }, [token]);
   return (
-    <ContextData.Provider value={{ userData }}>{children}</ContextData.Provider>
+    <ContextData.Provider value={{ userData, setUserData }}>
+      {children}
+    </ContextData.Provider>
   );
 };
 
