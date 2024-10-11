@@ -117,12 +117,6 @@ const Signup = () => {
               <span className="text-red-500">Password is required</span>
             )}
 
-<<<<<<< HEAD
-            <Button type="submit" color="primary" isLoading={isPending}>
-              Button
-            </Button>
-            {/* <button className='w-full  h-11 mt-3 hover:bg-[#ebebeb]  font-medium  rounded-lg flex justify-center items-center gap-3 '><LiaUserLockSolid className='text-2xl ' /> <span className='text-sm'>sign in with passkye</span></button> */}
-=======
             <button
               type="submit"
               className="w-full h-11 bg-[#2a2a2a] font-semibold text-white rounded-lg"
@@ -130,7 +124,6 @@ const Signup = () => {
             >
               {isSubmitting || isPending ? <Spinner size="md" /> : "Sign Up"}
             </button>
->>>>>>> init
           </div>
         </form>
 
