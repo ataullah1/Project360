@@ -58,7 +58,7 @@ const Signup = () => {
       setError(null);
     } catch (error) {
       console.error("Error:", error);
-      // Check if the error object has a response property and handle it accordingly
+      Check if the error object has a response property and handle it accordingly
       // setLoginError(error.response?.data?.message || error.message || "An error occurred");
     }
   };
