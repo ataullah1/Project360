@@ -116,7 +116,6 @@ const Signup = () => {
             {errors.password && (
               <span className="text-red-500">Password is required</span>
             )}
-
             <button
               type="submit"
               className="w-full h-11 bg-[#2a2a2a] font-semibold text-white rounded-lg"
