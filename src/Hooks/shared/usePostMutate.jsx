@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const usePostMutate = (route, onSuccess = () => {}, onError = () => {}) => {
   const Axios = useAxiosSecure();
+  console.log(Axios);
   const token = Cookies.get("token");
   const queryClient = useQueryClient();
   const [error, setError] = useState(null);
