@@ -1,10 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import Cookies from "js-cookie";
 import useAxiosSecure from "../useSecureApi";
-import useAxiosSecure from "../useSecureApi";
-import useAxiosSecure from "../useSecureApi";
-import useAxiosSecure from "../useSecureApi";
-import useAxiosSecure from "../useSecureApi";
 
 const useUpdateMutateWithID = (
   route,
