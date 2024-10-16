@@ -84,6 +84,7 @@ const Signup = () => {
               type="text"
               placeholder="Name"
               className={`border mt-1 mb-3 border-[#1a1a1a] w-full py-2 px-3 rounded-lg ${
+              className={`border mt-1 mb-3 border-[#1a1a1a] w-full py-2 px-3 rounded-lg ${
                 errors.name ? "border-red-500" : ""
               }`}
             />
