@@ -65,7 +65,6 @@ const Signup = () => {
 
   return (
     <div className="w-full pt-32 css-selector p-2">
-    <div className="w-full pt-32 css-selector p-2">
       <div className="max-w-[500px] mx-auto mb-6 p-10 rounded-2xl bg-white">
         <div>
           <img src="/log.png" className="h-16" alt="Logo" />
