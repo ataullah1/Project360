@@ -17,6 +17,7 @@ export default function Home() {
       </div>
       <div className="flex items-center justify-center mb-9 text-white">
         <PDFGenerator />
+        <PDFGenerator />
       </div>
       <Testimonial />
       <HomeMarquee />
