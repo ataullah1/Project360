@@ -6,21 +6,7 @@ import {
   View,
   StyleSheet,
   PDFDownloadLink,
-} from "@react-pdf <Text>
-          Here is some more text Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Nihil, molestiae consequuntur est officiis culpa
-          fuga voluptatibus enim aspernatur. Iste tempore quam dolores
-          blanditiis perferendis maxime in eveniet itaque eius repellendus
-          voluptas nisi quasi incidunt deleniti quibusdam vitae magni distinctio
-          odit cumque, voluptatum pariatur, assumenda delectus iusto nobis.
-          Quisquam at, architecto eum deleniti mollitia nam quam tempora
-          necessitatibus. Ullam, officia odio. Perferendis obcaecati voluptas
-          provident sed dignissimos earum eum perspiciatis odit voluptate,
-          repudiandae reiciendis eligendi laudantium. Sequi eaque id perferendis
-          ipsum delectus quod numquam, perspiciatis facere molestias assumenda
-          laudantium itaque dicta ducimus natus optio quae ratione deserunt ipsa
-          labore sed amet. in a PDF document.
-        </Text>/renderer";
+} from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
   page: { flexDirection: "column", padding: 20 },
@@ -61,7 +47,21 @@ const MyPDFDocument = () => (
           facere officiis est, excepturi nulla aut?
         </Text>
         <Text>Here is some molorere text in a PDF document.</Text>
-       
+        <Text>
+          Here is some more text Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Nihil, molestiae consequuntur est officiis culpa
+          fuga voluptatibus enim aspernatur. Iste tempore quam dolores
+          blanditiis perferendis maxime in eveniet itaque eius repellendus
+          voluptas nisi quasi incidunt deleniti quibusdam vitae magni distinctio
+          odit cumque, voluptatum pariatur, assumenda delectus iusto nobis.
+          Quisquam at, architecto eum deleniti mollitia nam quam tempora
+          necessitatibus. Ullam, officia odio. Perferendis obcaecati voluptas
+          provident sed dignissimos earum eum perspiciatis odit voluptate,
+          repudiandae reiciendis eligendi laudantium. Sequi eaque id perferendis
+          ipsum delectus quod numquam, perspiciatis facere molestias assumenda
+          laudantium itaque dicta ducimus natus optio quae ratione deserunt ipsa
+          labore sed amet. in a PDF document.
+        </Text>
         <Text>
           Here is some more text Lorem ipsum dolor sit amet consectetur
           adipisicing elit. Nihil, molestiae consequuntur est officiis culpa
